@@ -1,0 +1,7 @@
+requests==2.31.0
+pypdf==3.17.4
+openai==1.6.1
+networkx==3.2.1
+matplotlib==3.8.2
+pydantic==2.5.3
+pytest==7.4.4
