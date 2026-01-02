@@ -21,18 +21,26 @@ def main():
     if Config.TOKENIZE_TEXT:
         logger.info("Tokenizing and cleaning text using string operations only...")
         
+        # initialize the tokenizer class
         tokenizer = TextTokenizer(
             chunk_size=Config.CHUNK_SIZE,
             chunk_overlap=Config.CHUNK_OVERLAP
         )
         
+        # clean and tokenized data with sentence / paragraph / fixed stratergy maintained in the config file
         tokenized_data = tokenizer.tokenize(
             raw_text,
-            clean=Config.CLEAN_TEXT,  # Use config setting for cleaning
+            clean=Config.CLEAN_TEXT,
             chunk=Config.CHUNK_TEXT,
             chunk_strategy=Config.CHUNK_STRATEGY
         )
+
+        for i in tokenized_data['chunks']:
+            print (i['text'])
+
         processed_text = tokenized_data['text']
+        
+        # in the tokenizer.py the original length and processed length is stored against result dictionary
         logger.info(f"Text processed: {tokenized_data['original_length']} -> {tokenized_data['processed_length']} characters")
         if Config.CHUNK_TEXT and 'chunks' in tokenized_data:
             logger.info(f"Text chunked into {tokenized_data['chunk_count']} chunks")

@@ -266,7 +266,7 @@ class TextTokenizer:
         
         result = {
             'original_length': original_length,
-            'processed_length': len(text),
+            'processed_length': len(text), # clean the text and process the data and store the length
             'text': text
         }
         

@@ -23,8 +23,8 @@ class Config:
     CHUNK_TEXT = True  # Enable text chunking (set to True for very long texts)
     CHUNK_SIZE = 4000  # Maximum characters per chunk
     CHUNK_OVERLAP = 300  # Characters to overlap between chunks
-    CHUNK_STRATEGY = "fixed"  # Options: "sentence", "paragraph", "fixed"
-
+    CHUNK_STRATEGY = "sentence"  # Options: "sentence", "paragraph", "fixed"
+    
     @classmethod
     def get_output_path(cls, filename):
         if not os.path.exists(cls.OUTPUT_DIR):
