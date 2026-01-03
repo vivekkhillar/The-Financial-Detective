@@ -16,6 +16,7 @@ class Config:
     OUTPUT_DIR = "output"
     JSON_FILENAME = "graph_output.json"
     GRAPH_FILENAME = "knowledge_graph.png"
+    LOG_FILENAME = "financial_detective.log"
     
     # Tokenization Settings
     TOKENIZE_TEXT = True  # Enable text tokenization/cleaning

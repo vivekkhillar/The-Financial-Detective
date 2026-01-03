@@ -35,12 +35,11 @@ def main():
             chunk_strategy=Config.CHUNK_STRATEGY
         )
 
-        for i in tokenized_data['chunks']:
-            print (i['text'])
-
+        # once tokenized completed you will get the text clean with out white spaces and new lines and 
+        # you can also see the text of the chunk and the number of characters in the chunk also the chunk count
         processed_text = tokenized_data['text']
         
-        # in the tokenizer.py the original length and processed length is stored against result dictionary
+        # The original length and processed length is stored against result dictionary
         logger.info(f"Text processed: {tokenized_data['original_length']} -> {tokenized_data['processed_length']} characters")
         if Config.CHUNK_TEXT and 'chunks' in tokenized_data:
             logger.info(f"Text chunked into {tokenized_data['chunk_count']} chunks")

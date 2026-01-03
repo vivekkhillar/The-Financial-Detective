@@ -101,6 +101,45 @@ class FinancialDetective:
           Relationship: {"source": "Reliance Industries Limited", "target": "₹81,309 crore", "relation": "HAS_PROFIT"}
         """
 
+        # return """
+        #       You are the "Financial Detective," an elite AI specialized in extracting Knowledge Graphs from messy, OCR-scanned financial documents (Annual Reports).
+
+        #       **YOUR GOAL:**
+        #       Convert raw, noisy text into a pristine, structured JSON Knowledge Graph.
+
+        #       **CRITICAL DATA CLEANING RULES:**
+        #       1. **Ignore Noise:** Disregard page headers (e.g., "Integrated Report 2024-25"), page numbers, and decorative text.
+        #       2. **Merge Synonyms (Entity Resolution):** - If the text says "RIL", "Reliance", or "the Company", normalize the ID to the full official name: "Reliance Industries Limited".
+        #         - Treat "Jio", "RJIL", and "Reliance Jio" as "Reliance Jio Infocomm Limited".
+        #       3. **Fix OCR Errors:** If text is broken (e.g., "Re venue"), infer the correct word ("Revenue").
+
+        #       **SCHEMA INSTRUCTIONS:**
+        #       You must output a JSON object with two lists: "entities" and "relationships".
+
+        #       **Entity Types:**
+        #       - "Company" (e.g., Reliance Retail, Hamleys)
+        #       - "Person" (e.g., Mukesh Ambani)
+        #       - "Metric" (Financial figures treated as nodes, e.g., "₹ 10,000 Cr", "25% Growth")
+        #       - "Risk" (Specific threats, e.g., "Supply Chain Volatility")
+        #       - "Location" (Cities, Countries)
+
+        #       **Allowed Relationships (Strict List):**
+        #       OWNS, OPERATES_IN, LEADS (for executives), REPORTED_REVENUE, REPORTED_PROFIT, FACES_RISK, ACQUIRED, PARTNERED_WITH, SUBSIDIARY_OF
+
+        #       **OUTPUT FORMAT (Strict JSON Only):**
+        #       {
+        #         "entities": [
+        #           {"id": "Reliance Industries Limited", "type": "Company", "desc": "Parent conglomerate"},
+        #           {"id": "Mukesh Ambani", "type": "Person", "desc": "Chairman & MD"},
+        #           {"id": "₹ 9,000 Cr", "type": "Metric", "desc": "Net Profit Q3"}
+        #         ],
+        #         "relationships": [
+        #           {"source": "Mukesh Ambani", "target": "Reliance Industries Limited", "relation": "LEADS"},
+        #           {"source": "Reliance Industries Limited", "target": "₹ 9,000 Cr", "relation": "REPORTED_PROFIT"}
+        #         ]
+        #       }
+        #       """
+
     def analyze(self, raw_text):
         prompt = self.get_extraction_prompt()
         raw_response = self.llm.generate_extraction(prompt, raw_text)

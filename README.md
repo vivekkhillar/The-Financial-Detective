@@ -16,6 +16,7 @@ The Financial Detective processes unstructured financial text and extracts:
 3. **Strict JSON Output** - Generates `graph_output.json` with valid JSON schema
 4. **Visual Representation** - Creates `knowledge_graph.png` using NetworkX with all edges connected
 5. **Text Preprocessing** - Optional tokenization and chunking using string operations only (no regex)
+6. **Logging System** - Comprehensive logging to both console and file (`output/financial_detective.log`)
 
 ## 📁 Project Structure
 
@@ -36,7 +37,8 @@ The-Financial-Detective/
 │   └── messy_text.txt           # Input text file (extracted from PDF)
 ├── output/
 │   ├── graph_output.json        # Knowledge graph JSON output
-│   └── knowledge_graph.png      # Visual graph representation
+│   ├── knowledge_graph.png      # Visual graph representation
+│   └── financial_detective.log  # Application log file
 ├── PDF/
 │   └── RIL-Integrated-Annual-Report-2024-25.pdf
 ├── tests/
@@ -56,9 +58,11 @@ The-Financial-Detective/
   - Labeled edges with relationship types
   - Dynamic sizing based on graph complexity
   - High-resolution output (300 DPI)
+  - Automatic connection of isolated nodes to main entity
 - **Strict JSON Schema**: Valid JSON output following knowledge graph format
-- **Parallel Processing**: Optional parallel chunk processing for faster extraction
-- **Minimum Requirements**: Targets 20+ entities and 20+ relationships
+- **Comprehensive Logging**: Dual output to console and log file with timestamps
+- **Robust Error Handling**: Graceful handling of missing nodes, invalid JSON, and API errors
+- **Minimum Requirements**: Targets 20+ entities and 20+ relationships with validation
 
 ## 📦 Installation
 
@@ -95,6 +99,7 @@ The-Financial-Detective/
 3. **Check outputs:**
    - `output/graph_output.json` - Knowledge graph in JSON format
    - `output/knowledge_graph.png` - Visual graph representation
+   - `output/financial_detective.log` - Application execution log
 
 ### Configuration
 
@@ -116,7 +121,8 @@ Edit `src/config.py` to configure:
 
 - **File Paths:**
   - `MESSY_TEXT_FILE` - Path to input text file
-  - `OUTPUT_DIR` - Output directory for JSON and graph files
+  - `OUTPUT_DIR` - Output directory for JSON, graph, and log files
+  - `LOG_FILENAME` - Log file name (default: "financial_detective.log")
 
 ## 📊 JSON Schema
 
@@ -154,15 +160,21 @@ The output follows this strict JSON schema:
 
 ### Relationship Types
 
-- **OWNS**: Ownership relationships
+- **OWNS**: Ownership relationships (e.g., Reliance Retail OWNS Hamleys)
 - **SUBSIDIARY_OF**: Subsidiary relationships
-- **HAS_PROFIT**, **HAS_REVENUE**, **HAS_ASSET**, **HAS_EQUITY**, **HAS_DEBT**: Financial relationships
-- **EMPLOYS**, **CHAIRMAN**, **FOUNDER**, **CEO**, **DIRECTOR**: Personnel relationships
+- **ACQUIRED**: Acquisition relationships
+- **HAS_PROFIT**, **HAS_REVENUE**, **HAS_ASSET**, **HAS_EQUITY**, **HAS_DEBT**, **HAS_EXPORTS**, **HAS_CSR_CONTRIBUTION**: Financial relationships
+- **EMPLOYS**, **CHAIRMAN**, **FOUNDER**, **CEO**, **MANAGING_DIRECTOR**, **DIRECTOR**, **REPORTS_TO**: Personnel relationships
 - **FACES_RISK**: Risk relationships
 - **FOLLOWS**, **USES**: Framework relationships
 - **RANKED_IN**: Ranking relationships
 - **LOCATED_IN**: Location relationships
-- **RELATED_TO**: General relationships
+- **OPERATES**: Operational relationships
+- **INVESTED_IN**: Investment relationships
+- **PARTNERS_WITH**: Partnership relationships
+- **COMPETES_WITH**: Competitive relationships
+- **IMPACTS**: Impact relationships
+- **RELATED_TO**: General relationships (used for auto-connecting isolated nodes)
 
 ## 📈 Example Output
 
@@ -193,10 +205,15 @@ The output follows this strict JSON schema:
 - **Flexible Chunking**: Supports sentence, paragraph, or fixed-size chunking
 
 ### Graph Visualization
-- **Automatic Connection**: Isolated nodes are automatically connected to the main node
-- **Color Coding**: Nodes colored by entity type, edges colored by relationship type
+- **Automatic Connection**: Isolated nodes are automatically connected to the main node (typically the primary company)
+- **Color Coding**: 
+  - Nodes colored by entity type (Company=Blue, Person=Light Blue, Dollar Amount=Green, Risk=Red, Framework=Purple, etc.)
+  - Edges colored by relationship type (Ownership=Red, Financial=Green, Personnel=Blue, Risk=Orange, Framework=Purple)
 - **Dynamic Sizing**: Figure, node, and label sizes adjust based on graph complexity
 - **High Quality**: 300 DPI output for clear visualization
+- **Edge Labels**: All relationship types displayed on edges with formatted labels
+- **Node Metadata**: Entity metadata preserved and available in graph structure
+- **Missing Node Handling**: Automatically creates nodes for entities referenced in relationships but not explicitly defined
 
 ## 🧪 Testing
 
@@ -205,12 +222,32 @@ Run tests to verify extraction:
 pytest tests/
 ```
 
-## 📝 Notes
+## 📝 Current Project Status
 
+### ✅ Implemented Features
+- ✅ 100% LLM-based entity and relationship extraction (no regex)
+- ✅ Text preprocessing with string operations only (no regex)
+- ✅ Comprehensive entity extraction (9 entity types)
+- ✅ Rich relationship extraction (25+ relationship types)
+- ✅ Automatic graph connection (all nodes guaranteed to be connected)
+- ✅ Dual logging (console + file)
+- ✅ Robust error handling and JSON validation
+- ✅ High-quality graph visualization (300 DPI)
+- ✅ Missing node auto-creation from relationships
+- ✅ Minimum requirements validation (20+ entities/relationships)
+
+### 📊 Current Capabilities
+- **Entity Types**: Company, Person, Location, Dollar Amount, Risk, Product, Framework, Metric, Subsidiary, Partnership
+- **Relationship Types**: 25+ types including OWNS, HAS_PROFIT, CHAIRMAN, FOUNDER, FACES_RISK, FOLLOWS, etc.
+- **Graph Features**: Color-coded nodes/edges, labeled relationships, automatic isolation handling
+- **Processing**: Supports chunking, parallel processing, and flexible text preprocessing
+
+### 🔄 Notes
 - The project uses **no regex** for entity/relationship extraction (100% LLM-based)
 - Text preprocessing uses string operations only (no regex)
 - All nodes in the graph are guaranteed to be connected
 - Minimum target: 20+ entities and 20+ relationships
+- Logs are appended to file (not overwritten) for historical tracking
 
 ## 👤 Author
 

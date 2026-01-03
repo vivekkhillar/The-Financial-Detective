@@ -1,0 +1,475 @@
+2026-01-03 12:53:43,324 - INFO - Logger initialized. Log file: output\financial_detective.log
+2026-01-03 12:54:08,259 - INFO - Starting The Financial Detective...
+2026-01-03 12:54:08,260 - INFO - File path: data\messy_text.txt
+2026-01-03 12:54:08,261 - INFO - Reading messy text file from data\messy_text.txt...
+2026-01-03 12:54:08,268 - INFO - Loaded 22344 characters from text file.
+2026-01-03 12:54:08,270 - INFO - Raw text loaded: 22344 characters
+2026-01-03 12:54:08,270 - INFO - Tokenizing and cleaning text using string operations only...
+2026-01-03 12:54:08,271 - INFO - Starting tokenization process...
+2026-01-03 12:54:08,272 - INFO - Cleaning text using string operations only (minimal cleaning)...
+2026-01-03 12:54:08,273 - INFO - Text cleaned (minimal). Original length: 22327 characters
+2026-01-03 12:54:08,274 - INFO - Chunking text using 'sentence' strategy...
+2026-01-03 12:54:08,282 - INFO - Split text into 62 sentences
+2026-01-03 12:54:08,283 - INFO - Tokenization complete: 7 chunks created
+2026-01-03 12:54:08,309 - INFO - Text processed: 22344 -> 22327 characters
+2026-01-03 12:54:08,310 - INFO - Text chunked into 7 chunks
+2026-01-03 12:54:11,831 - INFO - Sending request to LLM...
+2026-01-03 12:54:51,728 - INFO - Extraction complete:
+2026-01-03 12:54:51,730 - INFO -   - Entities extracted: 18
+2026-01-03 12:54:51,733 - INFO -   - Relationships extracted: 15
+2026-01-03 12:54:51,733 - WARNING - ⚠️  Only 18 entities extracted. Target: 20+ entities
+2026-01-03 12:54:51,735 - WARNING - ⚠️  Only 15 relationships extracted. Target: 20+ relationships
+2026-01-03 12:54:51,770 - INFO - JSON data saved to output\graph_output.json
+2026-01-03 12:54:51,772 - INFO - Added 18 nodes to the graph
+2026-01-03 12:54:51,773 - INFO - Added 15 edges to the graph
+2026-01-03 12:54:51,773 - INFO - Total edges in graph: 15
+2026-01-03 12:54:51,774 - INFO - Found 2 isolated nodes: {'400 Mn+', 'Reliance Retail'}
+2026-01-03 12:54:51,774 - INFO - Connecting 2 isolated nodes to main node: Reliance Industries Limited
+2026-01-03 12:54:51,775 - INFO - Connected 400 Mn+ to Reliance Industries Limited with RELATED_TO
+2026-01-03 12:54:51,776 - INFO - Connected Reliance Retail to Reliance Industries Limited with RELATED_TO
+2026-01-03 12:54:51,777 - INFO - Added 2 connections from main node to isolated nodes
+2026-01-03 12:54:51,779 - INFO - All nodes are now connected!
+2026-01-03 12:54:54,919 - INFO - Drawing 17 edges
+2026-01-03 12:54:55,056 - INFO - Successfully drew 17 edges
+2026-01-03 12:54:55,077 - INFO - Found 17 edge labels to display
+2026-01-03 12:54:55,178 - INFO - Successfully displayed 17 edge labels
+2026-01-03 12:54:58,723 - INFO - Graph visualization saved to output\knowledge_graph.png
+2026-01-03 12:54:58,725 - INFO - Mission Complete. Documentation and Demo required next.
+2026-01-03 12:58:13,279 - INFO - Logger initialized. Log file: output\financial_detective.log
+2026-01-03 12:58:50,984 - INFO - Starting The Financial Detective...
+2026-01-03 12:58:50,985 - INFO - File path: data\messy_text.txt
+2026-01-03 12:58:50,986 - INFO - Reading messy text file from data\messy_text.txt...
+2026-01-03 12:58:50,994 - INFO - Loaded 22344 characters from text file.
+2026-01-03 12:58:50,995 - INFO - Raw text loaded: 22344 characters
+2026-01-03 12:58:50,995 - INFO - Tokenizing and cleaning text using string operations only...
+2026-01-03 12:58:50,996 - INFO - Starting tokenization process...
+2026-01-03 12:58:50,997 - INFO - Cleaning text using string operations only (minimal cleaning)...
+2026-01-03 12:58:50,999 - INFO - Text cleaned (minimal). Original length: 22327 characters
+2026-01-03 12:58:51,000 - INFO - Chunking text using 'sentence' strategy...
+2026-01-03 12:59:43,694 - INFO - Split text into 62 sentences
+2026-01-03 12:59:43,694 - INFO - Tokenization complete: 7 chunks created
+2026-01-03 12:59:43,696 - INFO - Text processed: 22344 -> 22327 characters
+2026-01-03 12:59:43,696 - INFO - Text chunked into 7 chunks
+2026-01-03 12:59:47,281 - INFO - Sending request to LLM...
+2026-01-03 13:00:31,480 - INFO - Extraction complete:
+2026-01-03 13:00:31,481 - INFO -   - Entities extracted: 18
+2026-01-03 13:00:31,481 - INFO -   - Relationships extracted: 14
+2026-01-03 13:00:31,481 - WARNING - ⚠️  Only 18 entities extracted. Target: 20+ entities
+2026-01-03 13:00:31,482 - WARNING - ⚠️  Only 14 relationships extracted. Target: 20+ relationships
+2026-01-03 13:00:31,514 - INFO - JSON data saved to output\graph_output.json
+2026-01-03 13:00:31,516 - INFO - Added 18 nodes to the graph
+2026-01-03 13:00:31,516 - INFO - Added 14 edges to the graph
+2026-01-03 13:00:31,517 - INFO - Total edges in graph: 14
+2026-01-03 13:00:31,517 - INFO - Found 3 isolated nodes: {'400 Mn+', 'Reliance Retail', '4,03,303'}
+2026-01-03 13:00:31,518 - INFO - Connecting 3 isolated nodes to main node: Reliance Industries Limited
+2026-01-03 13:00:31,519 - INFO - Connected 400 Mn+ to Reliance Industries Limited with RELATED_TO
+2026-01-03 13:00:31,519 - INFO - Connected Reliance Retail to Reliance Industries Limited with RELATED_TO
+2026-01-03 13:00:31,520 - INFO - Connected 4,03,303 to Reliance Industries Limited with RELATED_TO
+2026-01-03 13:00:31,521 - INFO - Added 3 connections from main node to isolated nodes
+2026-01-03 13:00:31,521 - INFO - All nodes are now connected!
+2026-01-03 13:00:35,196 - INFO - Drawing 17 edges
+2026-01-03 13:00:35,359 - INFO - Successfully drew 17 edges
+2026-01-03 13:00:35,385 - INFO - Found 17 edge labels to display
+2026-01-03 13:00:35,539 - INFO - Successfully displayed 17 edge labels
+2026-01-03 13:00:38,911 - INFO - Graph visualization saved to output\knowledge_graph.png
+2026-01-03 13:00:38,911 - INFO - Mission Complete. Documentation and Demo required next.
+2026-01-03 13:01:45,539 - INFO - Logger initialized. Log file: output\financial_detective.log
+2026-01-03 13:02:07,455 - INFO - Starting The Financial Detective...
+2026-01-03 13:02:07,456 - INFO - File path: data\messy_text.txt
+2026-01-03 13:02:07,458 - INFO - Reading messy text file from data\messy_text.txt...
+2026-01-03 13:02:07,463 - INFO - Loaded 22344 characters from text file.
+2026-01-03 13:02:07,464 - INFO - Raw text loaded: 22344 characters
+2026-01-03 13:02:07,466 - INFO - Tokenizing and cleaning text using string operations only...
+2026-01-03 13:02:07,467 - INFO - Starting tokenization process...
+2026-01-03 13:02:07,468 - INFO - Cleaning text using string operations only (minimal cleaning)...
+2026-01-03 13:02:07,470 - INFO - Text cleaned (minimal). Original length: 22327 characters
+2026-01-03 13:02:07,472 - INFO - Chunking text using 'sentence' strategy...
+2026-01-03 13:02:07,481 - INFO - Split text into 62 sentences
+2026-01-03 13:02:07,496 - INFO - Tokenization complete: 7 chunks created
+2026-01-03 13:02:07,498 - INFO - Text processed: 22344 -> 22327 characters
+2026-01-03 13:02:07,499 - INFO - Text chunked into 7 chunks
+2026-01-03 13:02:09,512 - INFO - Sending request to LLM...
+2026-01-03 13:02:34,249 - INFO - Extraction complete:
+2026-01-03 13:02:34,251 - INFO -   - Entities extracted: 17
+2026-01-03 13:02:34,252 - INFO -   - Relationships extracted: 12
+2026-01-03 13:02:34,253 - WARNING - ⚠️  Only 17 entities extracted. Target: 20+ entities
+2026-01-03 13:02:34,254 - WARNING - ⚠️  Only 12 relationships extracted. Target: 20+ relationships
+2026-01-03 13:02:34,296 - INFO - JSON data saved to output\graph_output.json
+2026-01-03 13:02:34,300 - INFO - Added 17 nodes to the graph
+2026-01-03 13:02:34,301 - INFO - Added 12 edges to the graph
+2026-01-03 13:02:34,303 - INFO - Total edges in graph: 12
+2026-01-03 13:02:34,304 - INFO - Found 4 isolated nodes: {'TIME100', 'Forbes Global 2000', 'Reliance Retail', '4,03,303'}
+2026-01-03 13:02:34,306 - INFO - Connecting 4 isolated nodes to main node: Reliance Industries Limited
+2026-01-03 13:02:34,309 - INFO - Connected TIME100 to Reliance Industries Limited with RELATED_TO
+2026-01-03 13:02:34,313 - INFO - Connected Forbes Global 2000 to Reliance Industries Limited with RELATED_TO
+2026-01-03 13:02:34,315 - INFO - Connected Reliance Retail to Reliance Industries Limited with RELATED_TO
+2026-01-03 13:02:34,317 - INFO - Connected 4,03,303 to Reliance Industries Limited with RELATED_TO
+2026-01-03 13:02:34,318 - INFO - Added 4 connections from main node to isolated nodes
+2026-01-03 13:02:34,319 - INFO - All nodes are now connected!
+2026-01-03 13:02:36,104 - INFO - Drawing 16 edges
+2026-01-03 13:02:36,246 - INFO - Successfully drew 16 edges
+2026-01-03 13:02:36,285 - INFO - Found 16 edge labels to display
+2026-01-03 13:02:36,381 - INFO - Successfully displayed 16 edge labels
+2026-01-03 13:02:40,029 - INFO - Graph visualization saved to output\knowledge_graph.png
+2026-01-03 13:02:40,030 - INFO - Mission Complete. Documentation and Demo required next.
+2026-01-03 13:06:40,476 - INFO - Logger initialized. Log file: output\financial_detective.log
+2026-01-03 13:06:52,039 - INFO - Starting The Financial Detective...
+2026-01-03 13:06:52,041 - INFO - File path: data\messy_text.txt
+2026-01-03 13:06:52,042 - INFO - Reading messy text file from data\messy_text.txt...
+2026-01-03 13:06:52,047 - INFO - Loaded 22344 characters from text file.
+2026-01-03 13:06:52,049 - INFO - Raw text loaded: 22344 characters
+2026-01-03 13:06:52,050 - INFO - Tokenizing and cleaning text using string operations only...
+2026-01-03 13:06:52,051 - INFO - Starting tokenization process...
+2026-01-03 13:06:52,053 - INFO - Cleaning text using string operations only (minimal cleaning)...
+2026-01-03 13:06:52,054 - INFO - Text cleaned (minimal). Original length: 22327 characters
+2026-01-03 13:06:52,055 - INFO - Chunking text using 'sentence' strategy...
+2026-01-03 13:06:52,067 - INFO - Split text into 62 sentences
+2026-01-03 13:06:52,085 - INFO - Tokenization complete: 7 chunks created
+2026-01-03 13:06:52,088 - INFO - Text processed: 22344 -> 22327 characters
+2026-01-03 13:06:52,092 - INFO - Text chunked into 7 chunks
+2026-01-03 13:06:54,265 - INFO - Sending request to LLM...
+2026-01-03 13:07:22,731 - INFO - Extraction complete:
+2026-01-03 13:07:22,733 - INFO -   - Entities extracted: 25
+2026-01-03 13:07:22,735 - INFO -   - Relationships extracted: 11
+2026-01-03 13:07:22,740 - WARNING - ⚠️  Only 11 relationships extracted. Target: 20+ relationships
+2026-01-03 13:07:22,852 - INFO - JSON data saved to output\graph_output.json
+2026-01-03 13:07:22,855 - INFO - Added 25 nodes to the graph
+2026-01-03 13:07:22,861 - INFO - Added 11 edges to the graph
+2026-01-03 13:07:22,869 - INFO - Total edges in graph: 11
+2026-01-03 13:07:22,872 - INFO - Found 13 isolated nodes: {'Consumer Electronics', 'August 29, 2025', 'Entertainment', 'OTT', 'Connectivity', 'Reliance Retail', 'News', 'Sports', '4,03,303', '400 Mn+', 'Fashion and Lifestyle', 'Grocery', 'TIME100'}
+2026-01-03 13:07:22,876 - INFO - Connecting 13 isolated nodes to main node: Reliance Industries Limited
+2026-01-03 13:07:22,880 - INFO - Connected Consumer Electronics to Reliance Industries Limited with RELATED_TO
+2026-01-03 13:07:22,885 - INFO - Connected August 29, 2025 to Reliance Industries Limited with LOCATED_IN
+2026-01-03 13:07:22,887 - INFO - Connected Entertainment to Reliance Industries Limited with RELATED_TO
+2026-01-03 13:07:22,890 - INFO - Connected OTT to Reliance Industries Limited with RELATED_TO
+2026-01-03 13:07:22,894 - INFO - Connected Connectivity to Reliance Industries Limited with RELATED_TO
+2026-01-03 13:07:22,898 - INFO - Connected Reliance Retail to Reliance Industries Limited with RELATED_TO
+2026-01-03 13:07:22,900 - INFO - Connected News to Reliance Industries Limited with RELATED_TO
+2026-01-03 13:07:22,904 - INFO - Connected Sports to Reliance Industries Limited with RELATED_TO
+2026-01-03 13:07:22,913 - INFO - Connected 4,03,303 to Reliance Industries Limited with RELATED_TO
+2026-01-03 13:07:22,916 - INFO - Connected 400 Mn+ to Reliance Industries Limited with RELATED_TO
+2026-01-03 13:07:22,919 - INFO - Connected Fashion and Lifestyle to Reliance Industries Limited with RELATED_TO
+2026-01-03 13:07:22,922 - INFO - Connected Grocery to Reliance Industries Limited with RELATED_TO
+2026-01-03 13:07:22,929 - INFO - Connected TIME100 to Reliance Industries Limited with RELATED_TO
+2026-01-03 13:07:22,935 - INFO - Added 13 connections from main node to isolated nodes
+2026-01-03 13:07:22,937 - INFO - All nodes are now connected!
+2026-01-03 13:07:24,926 - INFO - Drawing 24 edges
+2026-01-03 13:07:25,106 - INFO - Successfully drew 24 edges
+2026-01-03 13:07:25,134 - INFO - Found 24 edge labels to display
+2026-01-03 13:07:25,327 - INFO - Successfully displayed 24 edge labels
+2026-01-03 13:07:29,206 - INFO - Graph visualization saved to output\knowledge_graph.png
+2026-01-03 13:07:29,207 - INFO - Mission Complete. Documentation and Demo required next.
+2026-01-03 13:07:45,771 - INFO - Logger initialized. Log file: output\financial_detective.log
+2026-01-03 13:07:59,418 - INFO - Logger initialized. Log file: output\financial_detective.log
+2026-01-03 13:08:08,318 - INFO - Starting The Financial Detective...
+2026-01-03 13:08:08,319 - INFO - File path: data\messy_text.txt
+2026-01-03 13:08:08,320 - INFO - Reading messy text file from data\messy_text.txt...
+2026-01-03 13:08:08,324 - INFO - Loaded 22344 characters from text file.
+2026-01-03 13:08:08,325 - INFO - Raw text loaded: 22344 characters
+2026-01-03 13:08:08,326 - INFO - Tokenizing and cleaning text using string operations only...
+2026-01-03 13:08:08,327 - INFO - Starting tokenization process...
+2026-01-03 13:08:08,328 - INFO - Cleaning text using string operations only (minimal cleaning)...
+2026-01-03 13:08:08,329 - INFO - Text cleaned (minimal). Original length: 22327 characters
+2026-01-03 13:08:08,330 - INFO - Chunking text using 'sentence' strategy...
+2026-01-03 13:08:08,339 - INFO - Split text into 62 sentences
+2026-01-03 13:08:08,366 - INFO - Tokenization complete: 7 chunks created
+2026-01-03 13:08:08,368 - INFO - Text processed: 22344 -> 22327 characters
+2026-01-03 13:08:08,369 - INFO - Text chunked into 7 chunks
+2026-01-03 13:08:10,252 - INFO - Sending request to LLM...
+2026-01-03 13:08:35,888 - INFO - Extraction complete:
+2026-01-03 13:08:35,889 - INFO -   - Entities extracted: 17
+2026-01-03 13:08:35,890 - INFO -   - Relationships extracted: 13
+2026-01-03 13:08:35,891 - WARNING - ⚠️  Only 17 entities extracted. Target: 20+ entities
+2026-01-03 13:08:35,893 - WARNING - ⚠️  Only 13 relationships extracted. Target: 20+ relationships
+2026-01-03 13:08:35,916 - INFO - JSON data saved to output\graph_output.json
+2026-01-03 13:08:35,921 - INFO - Added 17 nodes to the graph
+2026-01-03 13:08:35,923 - INFO - Added 13 edges to the graph
+2026-01-03 13:08:35,924 - INFO - Total edges in graph: 13
+2026-01-03 13:08:35,926 - INFO - Found 3 isolated nodes: {'4,03,303', '400 Mn+ viewers', 'Dhirubhai H. Ambani'}
+2026-01-03 13:08:35,927 - INFO - Connecting 3 isolated nodes to main node: Reliance Industries Limited
+2026-01-03 13:08:35,928 - INFO - Connected 4,03,303 to Reliance Industries Limited with RELATED_TO
+2026-01-03 13:08:35,932 - INFO - Connected 400 Mn+ viewers to Reliance Industries Limited with RELATED_TO
+2026-01-03 13:08:35,934 - INFO - Connected Dhirubhai H. Ambani to Reliance Industries Limited with RELATED_TO
+2026-01-03 13:08:35,936 - INFO - Added 3 connections from main node to isolated nodes
+2026-01-03 13:08:35,938 - INFO - All nodes are now connected!
+2026-01-03 13:08:37,215 - INFO - Drawing 16 edges
+2026-01-03 13:08:37,298 - INFO - Successfully drew 16 edges
+2026-01-03 13:08:37,317 - INFO - Found 16 edge labels to display
+2026-01-03 13:08:37,381 - INFO - Successfully displayed 16 edge labels
+2026-01-03 13:08:40,757 - INFO - Graph visualization saved to output\knowledge_graph.png
+2026-01-03 13:08:40,758 - INFO - Mission Complete. Documentation and Demo required next.
+2026-01-03 13:09:34,757 - INFO - Logger initialized. Log file: output\financial_detective.log
+2026-01-03 13:09:45,787 - INFO - Starting The Financial Detective...
+2026-01-03 13:09:45,789 - INFO - File path: data\messy_text.txt
+2026-01-03 13:09:45,791 - INFO - Reading messy text file from data\messy_text.txt...
+2026-01-03 13:09:45,800 - INFO - Loaded 22344 characters from text file.
+2026-01-03 13:09:45,801 - INFO - Raw text loaded: 22344 characters
+2026-01-03 13:09:45,802 - INFO - Tokenizing and cleaning text using string operations only...
+2026-01-03 13:09:45,802 - INFO - Starting tokenization process...
+2026-01-03 13:09:45,803 - INFO - Cleaning text using string operations only (minimal cleaning)...
+2026-01-03 13:09:45,804 - INFO - Text cleaned (minimal). Original length: 22327 characters
+2026-01-03 13:09:45,804 - INFO - Chunking text using 'sentence' strategy...
+2026-01-03 13:09:45,813 - INFO - Split text into 62 sentences
+2026-01-03 13:09:45,815 - INFO - Tokenization complete: 7 chunks created
+2026-01-03 13:09:45,815 - INFO - Text processed: 22344 -> 22327 characters
+2026-01-03 13:09:45,816 - INFO - Text chunked into 7 chunks
+2026-01-03 13:09:48,063 - INFO - Sending request to LLM...
+2026-01-03 13:10:15,573 - INFO - Extraction complete:
+2026-01-03 13:10:15,574 - INFO -   - Entities extracted: 18
+2026-01-03 13:10:15,575 - INFO -   - Relationships extracted: 14
+2026-01-03 13:10:15,576 - WARNING - ⚠️  Only 18 entities extracted. Target: 20+ entities
+2026-01-03 13:10:15,577 - WARNING - ⚠️  Only 14 relationships extracted. Target: 20+ relationships
+2026-01-03 13:10:15,608 - INFO - JSON data saved to output\graph_output.json
+2026-01-03 13:10:15,609 - INFO - Added 18 nodes to the graph
+2026-01-03 13:10:15,610 - INFO - Added 14 edges to the graph
+2026-01-03 13:10:15,611 - INFO - Total edges in graph: 14
+2026-01-03 13:10:15,612 - INFO - Found 3 isolated nodes: {'400 Mn+', 'Reliance Retail', '4,03,303'}
+2026-01-03 13:10:15,614 - INFO - Connecting 3 isolated nodes to main node: Reliance Industries Limited
+2026-01-03 13:10:15,615 - INFO - Connected 400 Mn+ to Reliance Industries Limited with RELATED_TO
+2026-01-03 13:10:15,616 - INFO - Connected Reliance Retail to Reliance Industries Limited with RELATED_TO
+2026-01-03 13:10:15,617 - INFO - Connected 4,03,303 to Reliance Industries Limited with RELATED_TO
+2026-01-03 13:10:15,617 - INFO - Added 3 connections from main node to isolated nodes
+2026-01-03 13:10:15,618 - INFO - All nodes are now connected!
+2026-01-03 13:10:17,237 - INFO - Drawing 17 edges
+2026-01-03 13:10:17,314 - INFO - Successfully drew 17 edges
+2026-01-03 13:10:17,334 - INFO - Found 17 edge labels to display
+2026-01-03 13:10:17,414 - INFO - Successfully displayed 17 edge labels
+2026-01-03 13:10:22,327 - INFO - Graph visualization saved to output\knowledge_graph.png
+2026-01-03 13:10:22,329 - INFO - Mission Complete. Documentation and Demo required next.
+2026-01-03 13:57:32,285 - INFO - Logger initialized. Log file: output\financial_detective.log
+2026-01-03 13:57:48,740 - INFO - Starting The Financial Detective...
+2026-01-03 13:57:48,741 - INFO - File path: data\messy_text.txt
+2026-01-03 13:57:48,742 - INFO - Reading messy text file from data\messy_text.txt...
+2026-01-03 13:57:48,747 - INFO - Loaded 22344 characters from text file.
+2026-01-03 13:57:48,747 - INFO - Raw text loaded: 22344 characters
+2026-01-03 13:57:48,748 - INFO - Tokenizing and cleaning text using string operations only...
+2026-01-03 13:57:48,749 - INFO - Starting tokenization process...
+2026-01-03 13:57:48,749 - INFO - Cleaning text using string operations only (minimal cleaning)...
+2026-01-03 13:57:48,750 - INFO - Text cleaned (minimal). Original length: 22327 characters
+2026-01-03 13:57:48,750 - INFO - Chunking text using 'sentence' strategy...
+2026-01-03 13:57:48,755 - INFO - Split text into 62 sentences
+2026-01-03 13:57:48,755 - INFO - Tokenization complete: 7 chunks created
+2026-01-03 13:57:48,756 - INFO - Text processed: 22344 -> 22327 characters
+2026-01-03 13:57:48,757 - INFO - Text chunked into 7 chunks
+2026-01-03 13:57:50,865 - INFO - Sending request to LLM...
+2026-01-03 13:58:28,565 - INFO - Extraction complete:
+2026-01-03 13:58:28,567 - INFO -   - Entities extracted: 18
+2026-01-03 13:58:28,567 - INFO -   - Relationships extracted: 14
+2026-01-03 13:58:28,568 - WARNING - ⚠️  Only 18 entities extracted. Target: 20+ entities
+2026-01-03 13:58:28,569 - WARNING - ⚠️  Only 14 relationships extracted. Target: 20+ relationships
+2026-01-03 13:58:28,591 - INFO - JSON data saved to output\graph_output.json
+2026-01-03 13:58:28,592 - INFO - Added 18 nodes to the graph
+2026-01-03 13:58:28,593 - INFO - Added 14 edges to the graph
+2026-01-03 13:58:28,593 - INFO - Total edges in graph: 14
+2026-01-03 13:58:28,593 - INFO - Found 3 isolated nodes: {'4,03,303', '400 Mn+', 'Reliance Retail'}
+2026-01-03 13:58:28,594 - INFO - Connecting 3 isolated nodes to main node: Reliance Industries Limited
+2026-01-03 13:58:28,594 - INFO - Connected 4,03,303 to Reliance Industries Limited with RELATED_TO
+2026-01-03 13:58:28,594 - INFO - Connected 400 Mn+ to Reliance Industries Limited with RELATED_TO
+2026-01-03 13:58:28,594 - INFO - Connected Reliance Retail to Reliance Industries Limited with RELATED_TO
+2026-01-03 13:58:28,594 - INFO - Added 3 connections from main node to isolated nodes
+2026-01-03 13:58:28,595 - INFO - All nodes are now connected!
+2026-01-03 13:58:30,789 - INFO - Drawing 17 edges
+2026-01-03 13:58:30,865 - INFO - Successfully drew 17 edges
+2026-01-03 13:58:30,873 - INFO - Found 17 edge labels to display
+2026-01-03 13:58:30,904 - INFO - Successfully displayed 17 edge labels
+2026-01-03 13:58:32,637 - INFO - Graph visualization saved to output\knowledge_graph.png
+2026-01-03 13:58:32,638 - INFO - Mission Complete. Documentation and Demo required next.
+2026-01-03 14:03:58,046 - INFO - Logger initialized. Log file: output\financial_detective.log
+2026-01-03 14:04:06,772 - INFO - Starting The Financial Detective...
+2026-01-03 14:04:06,774 - INFO - File path: data\messy_text.txt
+2026-01-03 14:04:06,776 - INFO - Reading messy text file from data\messy_text.txt...
+2026-01-03 14:04:06,782 - INFO - Loaded 22344 characters from text file.
+2026-01-03 14:04:06,782 - INFO - Raw text loaded: 22344 characters
+2026-01-03 14:04:06,783 - INFO - Tokenizing and cleaning text using string operations only...
+2026-01-03 14:04:06,784 - INFO - Starting tokenization process...
+2026-01-03 14:04:06,785 - INFO - Cleaning text using string operations only (minimal cleaning)...
+2026-01-03 14:04:06,785 - INFO - Text cleaned (minimal). Original length: 22327 characters
+2026-01-03 14:04:06,786 - INFO - Chunking text using 'sentence' strategy...
+2026-01-03 14:04:06,790 - INFO - Split text into 62 sentences
+2026-01-03 14:04:06,791 - INFO - Tokenization complete: 7 chunks created
+2026-01-03 14:04:06,792 - INFO - Text processed: 22344 -> 22327 characters
+2026-01-03 14:04:06,793 - INFO - Text chunked into 7 chunks
+2026-01-03 14:04:08,574 - INFO - Sending request to LLM...
+2026-01-03 14:04:32,204 - INFO - Extraction complete:
+2026-01-03 14:04:32,205 - INFO -   - Entities extracted: 10
+2026-01-03 14:04:32,205 - INFO -   - Relationships extracted: 5
+2026-01-03 14:04:32,206 - WARNING - ⚠️  Only 10 entities extracted. Target: 20+ entities
+2026-01-03 14:04:32,206 - WARNING - ⚠️  Only 5 relationships extracted. Target: 20+ relationships
+2026-01-03 14:04:32,220 - INFO - JSON data saved to output\graph_output.json
+2026-01-03 14:04:32,221 - INFO - Added 10 nodes to the graph
+2026-01-03 14:04:32,221 - INFO - Added 5 edges to the graph
+2026-01-03 14:04:32,222 - INFO - Total edges in graph: 5
+2026-01-03 14:04:32,223 - INFO - Found 4 isolated nodes: {'4,03,303', '₹2,156 Crore', '400 Mn+', '₹2,83,719 Crore'}
+2026-01-03 14:04:32,224 - INFO - Connecting 4 isolated nodes to main node: Reliance Industries Limited
+2026-01-03 14:04:32,225 - INFO - Connected 4,03,303 to Reliance Industries Limited with RELATED_TO
+2026-01-03 14:04:32,226 - INFO - Connected ₹2,156 Crore to Reliance Industries Limited with RELATED_TO
+2026-01-03 14:04:32,226 - INFO - Connected 400 Mn+ to Reliance Industries Limited with RELATED_TO
+2026-01-03 14:04:32,227 - INFO - Connected ₹2,83,719 Crore to Reliance Industries Limited with RELATED_TO
+2026-01-03 14:04:32,227 - INFO - Added 4 connections from main node to isolated nodes
+2026-01-03 14:04:32,228 - INFO - All nodes are now connected!
+2026-01-03 14:04:33,233 - INFO - Drawing 9 edges
+2026-01-03 14:04:33,268 - INFO - Successfully drew 9 edges
+2026-01-03 14:04:33,278 - INFO - Found 9 edge labels to display
+2026-01-03 14:04:33,293 - INFO - Successfully displayed 9 edge labels
+2026-01-03 14:04:34,220 - INFO - Graph visualization saved to output\knowledge_graph.png
+2026-01-03 14:04:34,221 - INFO - Mission Complete. Documentation and Demo required next.
+2026-01-03 14:32:09,611 - INFO - Logger initialized. Log file: output\financial_detective.log
+2026-01-03 14:32:17,159 - INFO - Starting The Financial Detective...
+2026-01-03 14:32:17,160 - INFO - File path: data\messy_text.txt
+2026-01-03 14:32:17,162 - INFO - Reading messy text file from data\messy_text.txt...
+2026-01-03 14:32:17,166 - INFO - Loaded 22344 characters from text file.
+2026-01-03 14:32:17,167 - INFO - Raw text loaded: 22344 characters
+2026-01-03 14:32:17,167 - INFO - Tokenizing and cleaning text using string operations only...
+2026-01-03 14:32:17,168 - INFO - Starting tokenization process...
+2026-01-03 14:32:17,168 - INFO - Cleaning text using string operations only (minimal cleaning)...
+2026-01-03 14:32:17,169 - INFO - Text cleaned (minimal). Original length: 22327 characters
+2026-01-03 14:32:17,170 - INFO - Chunking text using 'sentence' strategy...
+2026-01-03 14:32:17,176 - INFO - Split text into 62 sentences
+2026-01-03 14:32:17,177 - INFO - Tokenization complete: 7 chunks created
+2026-01-03 14:32:17,179 - INFO - Text processed: 22344 -> 22327 characters
+2026-01-03 14:32:17,181 - INFO - Text chunked into 7 chunks
+2026-01-03 14:32:18,413 - INFO - Sending request to LLM...
+2026-01-03 14:32:43,089 - INFO - Extraction complete:
+2026-01-03 14:32:43,090 - INFO -   - Entities extracted: 10
+2026-01-03 14:32:43,091 - INFO -   - Relationships extracted: 5
+2026-01-03 14:32:43,091 - WARNING - ⚠️  Only 10 entities extracted. Target: 20+ entities
+2026-01-03 14:32:43,092 - WARNING - ⚠️  Only 5 relationships extracted. Target: 20+ relationships
+2026-01-03 14:32:43,106 - INFO - JSON data saved to output\graph_output.json
+2026-01-03 14:32:43,107 - INFO - Added 10 nodes to the graph
+2026-01-03 14:32:43,108 - INFO - Added 5 edges to the graph
+2026-01-03 14:32:43,109 - INFO - Total edges in graph: 5
+2026-01-03 14:32:43,110 - INFO - Found 4 isolated nodes: {'₹2,156 Crore', '400 Mn+', '₹2,83,719 Crore', '4,03,303'}
+2026-01-03 14:32:43,111 - INFO - Connecting 4 isolated nodes to main node: Reliance Industries Limited
+2026-01-03 14:32:43,113 - INFO - Connected ₹2,156 Crore to Reliance Industries Limited with RELATED_TO
+2026-01-03 14:32:43,115 - INFO - Connected 400 Mn+ to Reliance Industries Limited with RELATED_TO
+2026-01-03 14:32:43,116 - INFO - Connected ₹2,83,719 Crore to Reliance Industries Limited with RELATED_TO
+2026-01-03 14:32:43,117 - INFO - Connected 4,03,303 to Reliance Industries Limited with RELATED_TO
+2026-01-03 14:32:43,118 - INFO - Added 4 connections from main node to isolated nodes
+2026-01-03 14:32:43,120 - INFO - All nodes are now connected!
+2026-01-03 14:32:44,898 - INFO - Drawing 9 edges
+2026-01-03 14:32:44,941 - INFO - Successfully drew 9 edges
+2026-01-03 14:32:44,949 - INFO - Found 9 edge labels to display
+2026-01-03 14:32:44,967 - INFO - Successfully displayed 9 edge labels
+2026-01-03 14:32:46,324 - INFO - Graph visualization saved to output\knowledge_graph.png
+2026-01-03 14:32:46,325 - INFO - Mission Complete. Documentation and Demo required next.
+2026-01-03 14:32:49,544 - INFO - Logger initialized. Log file: output\financial_detective.log
+2026-01-03 14:32:49,546 - INFO - Reading PDF from PDF\RIL-Integrated-Annual-Report-2024-25.pdf...
+2026-01-03 14:32:50,518 - INFO - Extracting text from first 146 pages...
+2026-01-03 14:33:11,266 - INFO - Created messy text file: data\messy_text.txt
+2026-01-03 14:33:11,267 - INFO - Total characters: 976444
+2026-01-03 14:33:19,715 - INFO - Logger initialized. Log file: output\financial_detective.log
+2026-01-03 14:33:31,600 - INFO - Starting The Financial Detective...
+2026-01-03 14:33:31,601 - INFO - File path: data\messy_text.txt
+2026-01-03 14:33:31,613 - INFO - Reading messy text file from data\messy_text.txt...
+2026-01-03 14:33:31,623 - INFO - Loaded 976444 characters from text file.
+2026-01-03 14:33:31,624 - INFO - Raw text loaded: 976444 characters
+2026-01-03 14:33:31,624 - INFO - Tokenizing and cleaning text using string operations only...
+2026-01-03 14:33:31,624 - INFO - Starting tokenization process...
+2026-01-03 14:33:31,625 - INFO - Cleaning text using string operations only (minimal cleaning)...
+2026-01-03 14:33:31,635 - INFO - Text cleaned (minimal). Original length: 972469 characters
+2026-01-03 14:33:31,636 - INFO - Chunking text using 'sentence' strategy...
+2026-01-03 14:33:31,762 - INFO - Split text into 2413 sentences
+2026-01-03 14:33:31,765 - INFO - Tokenization complete: 285 chunks created
+2026-01-03 14:33:31,766 - INFO - Text processed: 976444 -> 972469 characters
+2026-01-03 14:33:31,766 - INFO - Text chunked into 285 chunks
+2026-01-03 14:33:33,398 - INFO - Sending request to LLM...
+2026-01-03 14:33:48,156 - INFO - Extraction complete:
+2026-01-03 14:33:48,156 - INFO -   - Entities extracted: 10
+2026-01-03 14:33:48,157 - INFO -   - Relationships extracted: 5
+2026-01-03 14:33:48,157 - WARNING - ⚠️  Only 10 entities extracted. Target: 20+ entities
+2026-01-03 14:33:48,157 - WARNING - ⚠️  Only 5 relationships extracted. Target: 20+ relationships
+2026-01-03 14:33:48,173 - INFO - JSON data saved to output\graph_output.json
+2026-01-03 14:33:48,174 - INFO - Added 10 nodes to the graph
+2026-01-03 14:33:48,175 - INFO - Added 5 edges to the graph
+2026-01-03 14:33:48,175 - INFO - Total edges in graph: 5
+2026-01-03 14:33:48,176 - INFO - Found 4 isolated nodes: {'4,03,303', '₹2,156 Crore', '₹2,83,719 Crore', '400 Mn+'}
+2026-01-03 14:33:48,176 - INFO - Connecting 4 isolated nodes to main node: Reliance Industries Limited
+2026-01-03 14:33:48,177 - INFO - Connected 4,03,303 to Reliance Industries Limited with RELATED_TO
+2026-01-03 14:33:48,177 - INFO - Connected ₹2,156 Crore to Reliance Industries Limited with RELATED_TO
+2026-01-03 14:33:48,177 - INFO - Connected ₹2,83,719 Crore to Reliance Industries Limited with RELATED_TO
+2026-01-03 14:33:48,177 - INFO - Connected 400 Mn+ to Reliance Industries Limited with RELATED_TO
+2026-01-03 14:33:48,177 - INFO - Added 4 connections from main node to isolated nodes
+2026-01-03 14:33:48,178 - INFO - All nodes are now connected!
+2026-01-03 14:33:48,938 - INFO - Drawing 9 edges
+2026-01-03 14:33:48,963 - INFO - Successfully drew 9 edges
+2026-01-03 14:33:48,972 - INFO - Found 9 edge labels to display
+2026-01-03 14:33:48,994 - INFO - Successfully displayed 9 edge labels
+2026-01-03 14:33:49,912 - INFO - Graph visualization saved to output\knowledge_graph.png
+2026-01-03 14:33:49,915 - INFO - Mission Complete. Documentation and Demo required next.
+2026-01-03 14:36:15,631 - INFO - Logger initialized. Log file: output\financial_detective.log
+2026-01-03 14:36:21,989 - INFO - Starting The Financial Detective...
+2026-01-03 14:36:21,990 - INFO - File path: data\messy_text.txt
+2026-01-03 14:36:21,991 - INFO - Reading messy text file from data\messy_text.txt...
+2026-01-03 14:36:21,999 - INFO - Loaded 976444 characters from text file.
+2026-01-03 14:36:22,000 - INFO - Raw text loaded: 976444 characters
+2026-01-03 14:36:22,001 - INFO - Tokenizing and cleaning text using string operations only...
+2026-01-03 14:36:22,001 - INFO - Starting tokenization process...
+2026-01-03 14:36:22,002 - INFO - Cleaning text using string operations only (minimal cleaning)...
+2026-01-03 14:36:22,014 - INFO - Text cleaned (minimal). Original length: 972469 characters
+2026-01-03 14:36:22,015 - INFO - Chunking text using 'sentence' strategy...
+2026-01-03 14:36:22,139 - INFO - Split text into 2413 sentences
+2026-01-03 14:36:22,143 - INFO - Tokenization complete: 285 chunks created
+2026-01-03 14:36:22,144 - INFO - Text processed: 976444 -> 972469 characters
+2026-01-03 14:36:22,145 - INFO - Text chunked into 285 chunks
+2026-01-03 14:36:23,079 - INFO - Sending request to LLM...
+2026-01-03 14:36:36,658 - INFO - Extraction complete:
+2026-01-03 14:36:36,658 - INFO -   - Entities extracted: 10
+2026-01-03 14:36:36,659 - INFO -   - Relationships extracted: 5
+2026-01-03 14:36:36,659 - WARNING - ⚠️  Only 10 entities extracted. Target: 20+ entities
+2026-01-03 14:36:36,660 - WARNING - ⚠️  Only 5 relationships extracted. Target: 20+ relationships
+2026-01-03 14:36:36,679 - INFO - JSON data saved to output\graph_output.json
+2026-01-03 14:36:36,681 - INFO - Added 10 nodes to the graph
+2026-01-03 14:36:36,683 - INFO - Added 5 edges to the graph
+2026-01-03 14:36:36,684 - INFO - Total edges in graph: 5
+2026-01-03 14:36:36,684 - INFO - Found 4 isolated nodes: {'400 Mn+', '₹2,156 Crore', '₹2,83,719 Crore', '4,03,303'}
+2026-01-03 14:36:36,685 - INFO - Connecting 4 isolated nodes to main node: Reliance Industries Limited
+2026-01-03 14:36:36,685 - INFO - Connected 400 Mn+ to Reliance Industries Limited with RELATED_TO
+2026-01-03 14:36:36,685 - INFO - Connected ₹2,156 Crore to Reliance Industries Limited with RELATED_TO
+2026-01-03 14:36:36,686 - INFO - Connected ₹2,83,719 Crore to Reliance Industries Limited with RELATED_TO
+2026-01-03 14:36:36,686 - INFO - Connected 4,03,303 to Reliance Industries Limited with RELATED_TO
+2026-01-03 14:36:36,687 - INFO - Added 4 connections from main node to isolated nodes
+2026-01-03 14:36:36,687 - INFO - All nodes are now connected!
+2026-01-03 14:36:37,572 - INFO - Drawing 9 edges
+2026-01-03 14:36:37,597 - INFO - Successfully drew 9 edges
+2026-01-03 14:36:37,606 - INFO - Found 9 edge labels to display
+2026-01-03 14:36:37,624 - INFO - Successfully displayed 9 edge labels
+2026-01-03 14:36:38,633 - INFO - Graph visualization saved to output\knowledge_graph.png
+2026-01-03 14:36:38,633 - INFO - Mission Complete. Documentation and Demo required next.
+2026-01-03 14:37:48,939 - INFO - Logger initialized. Log file: output\financial_detective.log
+2026-01-03 14:37:55,537 - INFO - Starting The Financial Detective...
+2026-01-03 14:37:55,538 - INFO - File path: data\messy_text.txt
+2026-01-03 14:37:55,539 - INFO - Reading messy text file from data\messy_text.txt...
+2026-01-03 14:37:55,557 - INFO - Loaded 976444 characters from text file.
+2026-01-03 14:37:55,560 - INFO - Raw text loaded: 976444 characters
+2026-01-03 14:37:55,561 - INFO - Tokenizing and cleaning text using string operations only...
+2026-01-03 14:37:55,562 - INFO - Starting tokenization process...
+2026-01-03 14:37:55,564 - INFO - Cleaning text using string operations only (minimal cleaning)...
+2026-01-03 14:37:55,581 - INFO - Text cleaned (minimal). Original length: 972469 characters
+2026-01-03 14:37:55,583 - INFO - Chunking text using 'sentence' strategy...
+2026-01-03 14:37:55,712 - INFO - Split text into 2413 sentences
+2026-01-03 14:37:55,716 - INFO - Tokenization complete: 285 chunks created
+2026-01-03 14:37:55,717 - INFO - Text processed: 976444 -> 972469 characters
+2026-01-03 14:37:55,718 - INFO - Text chunked into 285 chunks
+2026-01-03 14:37:57,299 - INFO - Sending request to LLM...
+2026-01-03 14:38:22,398 - INFO - Extraction complete:
+2026-01-03 14:38:22,399 - INFO -   - Entities extracted: 17
+2026-01-03 14:38:22,399 - INFO -   - Relationships extracted: 13
+2026-01-03 14:38:22,400 - WARNING - ⚠️  Only 17 entities extracted. Target: 20+ entities
+2026-01-03 14:38:22,400 - WARNING - ⚠️  Only 13 relationships extracted. Target: 20+ relationships
+2026-01-03 14:38:22,415 - INFO - JSON data saved to output\graph_output.json
+2026-01-03 14:38:22,416 - INFO - Added 17 nodes to the graph
+2026-01-03 14:38:22,417 - INFO - Added 13 edges to the graph
+2026-01-03 14:38:22,418 - INFO - Total edges in graph: 13
+2026-01-03 14:38:22,419 - INFO - Found 3 isolated nodes: {'4,03,303', '400 Mn+ viewers', 'Dhirubhai H. Ambani'}
+2026-01-03 14:38:22,420 - INFO - Connecting 3 isolated nodes to main node: Reliance Industries Limited
+2026-01-03 14:38:22,421 - INFO - Connected 4,03,303 to Reliance Industries Limited with RELATED_TO
+2026-01-03 14:38:22,421 - INFO - Connected 400 Mn+ viewers to Reliance Industries Limited with RELATED_TO
+2026-01-03 14:38:22,422 - INFO - Connected Dhirubhai H. Ambani to Reliance Industries Limited with RELATED_TO
+2026-01-03 14:38:22,423 - INFO - Added 3 connections from main node to isolated nodes
+2026-01-03 14:38:22,423 - INFO - All nodes are now connected!
+2026-01-03 14:38:23,285 - INFO - Drawing 16 edges
+2026-01-03 14:38:23,334 - INFO - Successfully drew 16 edges
+2026-01-03 14:38:23,343 - INFO - Found 16 edge labels to display
+2026-01-03 14:38:23,367 - INFO - Successfully displayed 16 edge labels
+2026-01-03 14:38:25,277 - INFO - Graph visualization saved to output\knowledge_graph.png
+2026-01-03 14:38:25,279 - INFO - Mission Complete. Documentation and Demo required next.
