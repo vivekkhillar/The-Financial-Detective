@@ -58,13 +58,6 @@ def main():
     logger.info(f"  - Entities extracted: {num_entities}")
     logger.info(f"  - Relationships extracted: {num_relationships}")
     
-    if num_entities < 20:
-        logger.warning(f"⚠️  Only {num_entities} entities extracted. Target: 20+ entities")
-    if num_relationships < 20:
-        logger.warning(f"⚠️  Only {num_relationships} relationships extracted. Target: 20+ relationships")
-    if num_entities >= 20 and num_relationships >= 20:
-        logger.info("✅ Minimum requirements met: 20+ entities and 20+ relationships")
-
     # 4. Save JSON Output
     json_path = Config.get_output_path(Config.JSON_FILENAME)
     with open(json_path, 'w') as f:

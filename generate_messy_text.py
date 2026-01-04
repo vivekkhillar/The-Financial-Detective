@@ -53,6 +53,6 @@ if __name__ == "__main__":
     output_path.parent.mkdir(exist_ok=True)
     
     # Extract messy text from function extract_messy_text
-    extract_messy_text(pdf_path, output_path, pages=160)
+    extract_messy_text(pdf_path, output_path, pages=5)
     print(f"\nMessy text file created: {output_path}")
 
