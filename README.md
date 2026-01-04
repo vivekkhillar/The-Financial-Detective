@@ -154,7 +154,7 @@ The-Financial-Detective/
 
 3. **Check outputs:**
    - `output/graph_output.json` - Knowledge graph in JSON format
-   - `output/knowledge_graph.png` - Visual graph representation
+   - `output/knowledge_graph.png` - Visual graph representation ([View Example](./output/knowledge_graph.png))
    - `output/financial_detective.log` - Application execution log
 
 ### Configuration
@@ -234,6 +234,12 @@ The output follows this strict JSON schema:
 
 ## 📈 Example Output
 
+### Visual Graph
+
+![Knowledge Graph](./output/knowledge_graph.png)
+
+*The generated knowledge graph visualization showing entities and relationships extracted from the financial text.*
+
 ### Entities
 - Reliance Industries Limited (Company)
 - Mukesh D. Ambani (Person - Chairman)
@@ -246,6 +252,12 @@ The output follows this strict JSON schema:
 - `Mukesh D. Ambani → CHAIRMAN → Reliance Industries Limited`
 - `Reliance Industries Limited → HAS_PROFIT → ₹81,309 crore`
 - `Reliance Industries Limited → FOLLOWS → GRI Standards`
+
+### Output Files
+
+- **JSON Output**: [`output/graph_output.json`](./output/graph_output.json) - Structured knowledge graph data
+- **Visual Graph**: [`output/knowledge_graph.png`](./output/knowledge_graph.png) - High-resolution graph visualization
+- **Log File**: [`output/financial_detective.log`](./output/financial_detective.log) - Execution logs
 
 ## 🔧 Technical Details
 
