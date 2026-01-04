@@ -73,7 +73,6 @@ The-Financial-Detective/
   - Creates NetworkX directed graph
   - Connects isolated nodes to main entity
   - Applies color coding by entity/relationship type
-  - Handles dollar sign display ($, ₹)
   - Generates high-resolution PNG output
   - Displays main node with company name only
 
@@ -85,7 +84,6 @@ The-Financial-Detective/
 
 - **`generate_messy_text.py`**: PDF to text converter:
   - Extracts text from PDF files
-  - Fixes currency symbol corruption ($, ₹)
   - Saves to `data/messy_text.txt`
 
 ## 🚀 Features
@@ -115,8 +113,6 @@ The-Financial-Detective/
 - **Smart Labeling**:
   - Main node displays only company name (clean, no relationship clutter)
   - Other nodes show entity name with relationship context
-  - Dollar signs ($) and rupee signs (₹) properly displayed
-  - Currency symbol normalization (US$ → $, US → $)
   - Truncated labels for long text with ellipsis
 
 - **Layout Algorithms**:
@@ -277,14 +273,10 @@ The output follows this strict JSON schema:
 - **Smart Labeling**: 
   - Main node shows only company name (clean display)
   - Other nodes show entity name with relationship context
-  - Currency symbols ($, ₹) properly rendered
   - Labels truncated intelligently for readability
 - **Node Metadata**: Entity metadata preserved and available in graph structure
 - **Missing Node Handling**: Automatically creates nodes for entities referenced in relationships but not explicitly defined
-- **Currency Symbol Handling**: 
-  - Properly displays dollar signs ($) and rupee signs (₹)
-  - Normalizes "US$" and "US " to "$" for consistency
-  - Handles currency symbol corruption from PDF extraction
+
 
 ## 🧪 Testing
 
