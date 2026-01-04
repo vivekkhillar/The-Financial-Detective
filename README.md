@@ -405,11 +405,4 @@ pytest tests/
 ## 👤 Author
 
 **Vivek Khillar**
-<<<<<<< HEAD
-
-## 📄 License
-
-[Add your license here]
-=======
 **05-01-2026**
->>>>>>> 8dc6b8309b44c4edd7dd930208fb955cec37120e
