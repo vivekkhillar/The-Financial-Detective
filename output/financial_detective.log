@@ -14085,3 +14085,5 @@ Here's a breakdown of the key takeaways from the provided text, organized for cl
 2026-01-04 23:46:39,021 - INFO - Connected ₹10,00,000 Crore (Dollar Amount) to Reliance Industries Limited with HAS_EQUITY
 2026-01-04 23:47:04,949 - INFO - Graph visualization saved to output\knowledge_graph.png
 2026-01-04 23:47:04,956 - INFO - Mission Complete. Documentation and Demo required next.
+2026-01-04 23:59:39,367 - INFO - Logger initialized. Log file: output\financial_detective.log
+2026-01-04 23:59:42,934 - INFO - Text length (13 chars) is manageable, processing directly

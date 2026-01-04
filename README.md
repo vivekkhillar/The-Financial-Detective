@@ -340,7 +340,4 @@ pytest tests/
 ## 👤 Author
 
 **Vivek Khillar**
-
-## 📄 License
-
-[Add your license here]
+**05-01-2026**
