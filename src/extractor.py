@@ -409,30 +409,33 @@ class FinancialDetective:
         for i, chunk in enumerate(chunks):
             logger.info(f"Processing chunk {i + 1}/{len(chunks)} ({len(chunk)} chars)...")
             
-            # Retry logic for each chunk
+            # Retry logic for each chunk if json parse error or any other error occurs
             for attempt in range(2):
                 try:
-                    # Get already extracted entities to avoid duplicates of the entities already extracted
+                    # Get already extracted entities to avoid duplicates of the entities already extracted else null will set
                     existing_entity_names = {self._normalize_name(e.get('id') or e.get('name') or '') 
                                            for e in final_graph["entities"] if isinstance(e, dict)}
                     
+                    # process the single chunk to the LLM and get the result
                     chunk_result = self._process_single_chunk(chunk, existing_entities=existing_entity_names)
                     
-                    # Merge results
+                    # Merge results to the final graph 
                     if "entities" in chunk_result:
                         final_graph["entities"].extend(chunk_result["entities"])
                     if "relationships" in chunk_result:
                         final_graph["relationships"].extend(chunk_result["relationships"])
                     
-                    # Incremental deduplication after each chunk
+                    # Incremental deduplication after each chunk to avoid duplicates of the entities and relationships already extracted
                     final_graph["entities"] = self._deduplicate_entities(final_graph["entities"])
-                    # Create entity map for relationship deduplication
+                    # Create entity map for relationship deduplication to avoid duplicates of the relationships already extracted
                     entity_map = {}
                     for e in final_graph["entities"]:
                         if isinstance(e, dict):
                             entity_id = e.get('id') or e.get('name') or ''
                             if entity_id:
                                 entity_map[entity_id] = e
+                    
+                    # Deduplicate relationships to avoid duplicates of the relationships already extracted
                     final_graph["relationships"] = self._deduplicate_relationships(final_graph["relationships"], entity_map)
                     
                     logger.info(f"Chunk {i + 1} success: +{len(chunk_result.get('entities', []))} entities, +{len(chunk_result.get('relationships', []))} relationships")
@@ -460,8 +463,10 @@ class FinancialDetective:
         # Filter out invalid entity types (dates, events, documents that shouldn't be in financial graph)
         final_graph['entities'] = self._filter_invalid_entities(final_graph['entities'])
         
+        # Deduplicate entities to avoid duplicates of the entities already extracted
         final_graph['entities'] = self._deduplicate_entities(final_graph['entities'])
-        # Create entity map for relationship deduplication
+        
+        # Create entity map for relationship deduplication to avoid duplicates of the relationships already extracted
         entity_map = {}
         for e in final_graph['entities']:
             if isinstance(e, dict):

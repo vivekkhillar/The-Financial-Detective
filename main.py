@@ -50,7 +50,7 @@ def main():
     # 3. Extract Info via LLM
     detective = FinancialDetective()
     graph_data = detective.analyze(processed_text)
-    
+    logger.info(f"Graph data: {graph_data}")
     # Validate minimum requirements
     num_entities = len(graph_data.get('entities', []))
     num_relationships = len(graph_data.get('relationships', []))
