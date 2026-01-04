@@ -369,59 +369,84 @@ class GraphVisualizer:
         
         labels = {}
         for node in G.nodes():
-            label = str(node).strip()
-            # Ensure dollar signs are preserved in node labels
-            if '$' in label:
-                label = label.replace('\\$', '$')  # Unescape if escaped
-                label = label.replace('US ', 'US$ ')  # Fix "US 65.2 billion" -> "US$ 65.2 billion"
+            # Get original node name - preserve dollar signs from JSON
+            original_node = str(node).strip()
+            label = original_node
+            
+            # Ensure dollar signs are preserved and visible
+            # Handle different patterns: "US$", "US ", or just "$"
+            if '$' in original_node:
+                # Dollar sign exists - preserve it
+                label = original_node.replace('\\$', '$')  # Unescape if escaped
+            elif original_node.startswith('US ') and any(c.isdigit() for c in original_node):
+                # Pattern: "US 38.7 billion" -> convert to "$ 38.7 billion"
+                import re
+                label = re.sub(r'^US\s+', '$ ', original_node)
+            elif original_node.startswith('US$'):
+                # Pattern: "US$ 38.7 billion" -> keep as is or convert to "$ 38.7 billion"
+                label = original_node.replace('US$', '$')
             
             is_main_node = (main_node and node == main_node)
             is_isolated = node in isolated_nodes
             
-            # Collect relationship information for this node
-            relationship_parts = []
-            
-            # Add incoming relationships (what connects TO this node)
-            if node in incoming_relations:
-                for source, rel_label in incoming_relations[node][:3]:  # Limit to 3 incoming
-                    # Ensure dollar signs are preserved in relationship labels
-                    if isinstance(rel_label, str):
-                        rel_label = rel_label.replace('\\$', '$').replace('US ', 'US$ ')
-                    relationship_parts.append(rel_label)
-            
-            # Add outgoing relationships (what this node connects TO)
-            if node in outgoing_relations:
-                for target, rel_label in outgoing_relations[node][:3]:  # Limit to 3 outgoing
-                    # Ensure dollar signs are preserved in relationship labels
-                    if isinstance(rel_label, str):
-                        rel_label = rel_label.replace('\\$', '$').replace('US ', 'US$ ')
-                    relationship_parts.append(rel_label)
-            
-            # For isolated nodes, add metadata/description to label
-            if is_isolated and entity_data_map:
-                node_entity = entity_data_map.get(node, {})
-                node_data = G.nodes.get(node, {})
+            # For main node, show only the company name without any relationship information
+            if not is_main_node:
+                # Collect relationship information for this node (skip for main node)
+                relationship_parts = []
                 
-                # Get metadata or description
-                metadata = str(node_data.get('metadata', '') or '').strip()
-                description = str(node_entity.get('description', '') or node_entity.get('metadata', '') or '').strip()
+                # Add incoming relationships (what connects TO this node)
+                if node in incoming_relations:
+                    for source, rel_label in incoming_relations[node][:3]:  # Limit to 3 incoming
+                        # Ensure dollar signs are preserved in relationship labels
+                        if isinstance(rel_label, str):
+                            rel_label = rel_label.replace('\\$', '$')
+                            # Convert "US " to "$ " and "US$" to "$"
+                            import re
+                            if 'US$' in rel_label:
+                                rel_label = rel_label.replace('US$', '$')
+                            elif re.match(r'.*US\s+\d', rel_label):
+                                rel_label = re.sub(r'US\s+', '$ ', rel_label)
+                        relationship_parts.append(rel_label)
                 
-                # Use description if available, otherwise metadata
-                additional_info = description if description else metadata
+                # Add outgoing relationships (what this node connects TO)
+                if node in outgoing_relations:
+                    for target, rel_label in outgoing_relations[node][:3]:  # Limit to 3 outgoing
+                        # Ensure dollar signs are preserved in relationship labels
+                        if isinstance(rel_label, str):
+                            rel_label = rel_label.replace('\\$', '$')
+                            # Convert "US " to "$ " and "US$" to "$"
+                            import re
+                            if 'US$' in rel_label:
+                                rel_label = rel_label.replace('US$', '$')
+                            elif re.match(r'.*US\s+\d', rel_label):
+                                rel_label = re.sub(r'US\s+', '$ ', rel_label)
+                        relationship_parts.append(rel_label)
                 
-                if additional_info and len(additional_info.strip()) > 0:
-                    additional_info = additional_info.strip()
-                    if len(additional_info) > 50:
-                        additional_info = additional_info[:47] + "..."
-                    relationship_parts.append(additional_info)
-            
-            # Combine relationship information with node name
-            if relationship_parts:
-                # Limit total relationships to avoid very long labels
-                rel_text = ", ".join(relationship_parts[:4])  # Max 4 relationships
-                if len(rel_text) > 100:
-                    rel_text = rel_text[:97] + "..."
-                label = f"{label} ({rel_text})"
+                # For isolated nodes, add metadata/description to label
+                if is_isolated and entity_data_map:
+                    node_entity = entity_data_map.get(node, {})
+                    node_data = G.nodes.get(node, {})
+                    
+                    # Get metadata or description
+                    metadata = str(node_data.get('metadata', '') or '').strip()
+                    description = str(node_entity.get('description', '') or node_entity.get('metadata', '') or '').strip()
+                    
+                    # Use description if available, otherwise metadata
+                    additional_info = description if description else metadata
+                    
+                    if additional_info and len(additional_info.strip()) > 0:
+                        additional_info = additional_info.strip()
+                        if len(additional_info) > 50:
+                            additional_info = additional_info[:47] + "..."
+                        relationship_parts.append(additional_info)
+                
+                # Combine relationship information with node name
+                if relationship_parts:
+                    # Limit total relationships to avoid very long labels
+                    rel_text = ", ".join(relationship_parts[:4])  # Max 4 relationships
+                    if len(rel_text) > 100:
+                        rel_text = rel_text[:97] + "..."
+                    label = f"{label} ({rel_text})"
             
             # Truncate if too long
             max_len = max_label_len * 2 if is_main_node else max_label_len
