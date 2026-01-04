@@ -1,0 +1,306 @@
+{
+  "entities": [
+    {
+      "id": "Reliance Industries Limited",
+      "type": "Company",
+      "metadata": "Parent company"
+    },
+    {
+      "id": "Jio",
+      "type": "Company",
+      "metadata": "Subsidiary"
+    },
+    {
+      "id": "Digital Services",
+      "type": "Product",
+      "metadata": "Business segment"
+    },
+    {
+      "id": "Media and Entertainment",
+      "type": "Company",
+      "metadata": "Business unit"
+    },
+    {
+      "id": "Oil and Gas",
+      "type": "Product",
+      "metadata": "Business segment"
+    },
+    {
+      "id": "Mukesh D. Ambani",
+      "type": "Person",
+      "metadata": "Chairman and Managing Director"
+    },
+    {
+      "id": "\u20b910,00,000 Crore",
+      "type": "Dollar Amount",
+      "metadata": "Consolidated Total Equity"
+    },
+    {
+      "id": "\u20b92,83,719 Crore",
+      "type": "Dollar Amount",
+      "metadata": "Exports"
+    },
+    {
+      "id": "\u20b92,156 Crore",
+      "type": "Dollar Amount",
+      "metadata": "CSR Contribution"
+    },
+    {
+      "id": "Market volatility risk",
+      "type": "Risk",
+      "metadata": "Risk factor"
+    },
+    {
+      "id": "Regulatory compliance risk",
+      "type": "Risk",
+      "metadata": "Risk factor"
+    },
+    {
+      "id": "\u20b93,30,943 Crore",
+      "type": "Dollar Amount",
+      "metadata": "Revenue"
+    },
+    {
+      "id": "US$ 38.7 Billion",
+      "type": "Dollar Amount",
+      "metadata": "Revenue"
+    },
+    {
+      "id": "\u20b925,094 Crore",
+      "type": "Dollar Amount",
+      "metadata": "EBITDA"
+    },
+    {
+      "id": "\u20b920,696 Crore",
+      "type": "Dollar Amount",
+      "metadata": "Revenue"
+    },
+    {
+      "id": "\u20b91,54,119 Crore",
+      "type": "Dollar Amount",
+      "metadata": "Revenue"
+    },
+    {
+      "id": "\u20b96,26,921 Crore",
+      "type": "Dollar Amount",
+      "metadata": "Revenue"
+    },
+    {
+      "id": "\u20b954,988 Crore",
+      "type": "Dollar Amount",
+      "metadata": "EBITDA"
+    },
+    {
+      "id": "Shri Dhirubhai Ambani",
+      "type": "Person",
+      "metadata": "Founder"
+    },
+    {
+      "id": "\u20b910,71,174 crore",
+      "type": "Dollar Amount",
+      "metadata": "Consolidated revenue"
+    },
+    {
+      "id": "\u20b91,83,422 crore",
+      "type": "Dollar Amount",
+      "metadata": "Consolidated EBITDA"
+    },
+    {
+      "id": "\u20b981,309 crore",
+      "type": "Dollar Amount",
+      "metadata": "Consolidated PAT"
+    },
+    {
+      "id": "Disney",
+      "type": "Company",
+      "metadata": "Partner in Media business"
+    },
+    {
+      "id": "China",
+      "type": "Company",
+      "metadata": "Source of incremental supply additions"
+    },
+    {
+      "id": "6.5%",
+      "type": "Metric",
+      "metadata": "Growth rate"
+    },
+    {
+      "id": "9.2%",
+      "type": "Metric",
+      "metadata": "Growth rate"
+    },
+    {
+      "id": "16%",
+      "type": "Metric",
+      "metadata": "Growth rate"
+    },
+    {
+      "id": "27%",
+      "type": "Metric",
+      "metadata": "Growth rate"
+    },
+    {
+      "id": "14%",
+      "type": "Metric",
+      "metadata": "Growth rate"
+    },
+    {
+      "id": "8.6%",
+      "type": "Metric",
+      "metadata": "Growth rate"
+    },
+    {
+      "id": "4.9%",
+      "type": "Metric",
+      "metadata": "Growth rate"
+    },
+    {
+      "id": "11.9%",
+      "type": "Metric",
+      "metadata": "Decline rate"
+    },
+    {
+      "id": "7.1%",
+      "type": "Metric",
+      "metadata": "Growth rate"
+    },
+    {
+      "id": "US$ 125.3 billion",
+      "type": "Dollar Amount",
+      "metadata": "Consolidated revenue"
+    },
+    {
+      "id": "\u20b910,00,122 crore",
+      "type": "Dollar Amount",
+      "metadata": "Consolidated revenue previous year"
+    },
+    {
+      "id": "2.9%",
+      "type": "Metric",
+      "metadata": "EBITDA growth rate"
+    },
+    {
+      "id": "US$ 21.5 billion",
+      "type": "Dollar Amount",
+      "metadata": "Consolidated EBITDA"
+    },
+    {
+      "id": "\u20b91,78,290 crore",
+      "type": "Dollar Amount",
+      "metadata": "Consolidated EBITDA previous year"
+    },
+    {
+      "id": "US$ 9.5 billion",
+      "type": "Dollar Amount",
+      "metadata": "Consolidated PAT"
+    },
+    {
+      "id": "Retail",
+      "type": "Product",
+      "metadata": "Business segment"
+    },
+    {
+      "id": "Oil to Chemicals (O2C)",
+      "type": "Product",
+      "metadata": "Business segment"
+    },
+    {
+      "id": "\u20b91,46,917 crore",
+      "type": "Dollar Amount",
+      "metadata": "Consolidated cash profit"
+    },
+    {
+      "id": "\u20b93,47,530 crore",
+      "type": "Dollar Amount",
+      "metadata": "Gross debt"
+    },
+    {
+      "id": "US$ 40.7 billion",
+      "type": "Dollar Amount",
+      "metadata": "Gross debt"
+    },
+    {
+      "id": "\u20b91,17,083 crore",
+      "type": "Dollar Amount",
+      "metadata": "Net debt"
+    },
+    {
+      "id": "US$ 13.7 billion",
+      "type": "Dollar Amount",
+      "metadata": "Net debt"
+    },
+    {
+      "id": "\u20b91,31,107 crore",
+      "type": "Dollar Amount",
+      "metadata": "Capex"
+    },
+    {
+      "id": "US$ 15.3 billion",
+      "type": "Dollar Amount",
+      "metadata": "Capex"
+    },
+    {
+      "id": "\u20b91,31,769 crore",
+      "type": "Dollar Amount",
+      "metadata": "Capex previous year"
+    },
+    {
+      "id": "Standalone RIL",
+      "type": "Company",
+      "metadata": "Standalone entity"
+    },
+    {
+      "id": "\u20b95,57,163 crore",
+      "type": "Dollar Amount",
+      "metadata": "Standalone revenue"
+    },
+    {
+      "id": "US$ 65.2 billion",
+      "type": "Dollar Amount",
+      "metadata": "Standalone revenue"
+    },
+    {
+      "id": "\u20b986,393 crore",
+      "type": "Dollar Amount",
+      "metadata": "Standalone EBITDA previous year"
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Reliance Industries Limited",
+      "target": "Jio",
+      "relation": "OWNS"
+    },
+    {
+      "source": "Reliance Industries Limited",
+      "target": "Reliance Industries Limited",
+      "relation": "OWNS"
+    },
+    {
+      "source": "Reliance Industries Limited",
+      "target": "Media and Entertainment",
+      "relation": "OWNS"
+    },
+    {
+      "source": "Shri Dhirubhai Ambani",
+      "target": "Reliance Industries Limited",
+      "relation": "FOUNDER"
+    },
+    {
+      "source": "Mukesh D. Ambani",
+      "target": "Reliance Industries Limited",
+      "relation": "CHAIRMAN"
+    },
+    {
+      "source": "Reliance Industries Limited",
+      "target": "Disney",
+      "relation": "EMPLOYS"
+    },
+    {
+      "source": "Reliance Industries Limited",
+      "target": "Disney",
+      "relation": "OWNS"
+    }
+  ]
+}

@@ -34,11 +34,6 @@ ENV/
 *~
 .DS_Store
 
-# Project specific
-output/*.png
-output/*.json
-data/messy_text.txt
-
 # Keep output directory structure
 !output/.gitkeep
 
