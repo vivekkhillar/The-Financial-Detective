@@ -22,6 +22,7 @@ The Financial Detective processes unstructured financial text and extracts:
 
 ```
 The-Financial-Detective/
+<<<<<<< HEAD
 ├── main.py                      # Main entry point
 ├── generate_messy_text.py       # Script to generate messy text from PDF
 ├── src/
@@ -72,6 +73,114 @@ The-Financial-Detective/
    cd The-Financial-Detective
    ```
 
+=======
+├── main.py                      # Main entry point - orchestrates the entire pipeline
+├── generate_messy_text.py       # Script to extract text from PDF and generate messy_text.txt
+├── requirements.txt             # Python dependencies
+├── README.md                    # Project documentation
+├── REQUIREMENTS_CHECKLIST.md    # Requirements verification checklist
+│
+├── src/                         # Source code package
+│   ├── __init__.py              # Package initialization with auto path setup
+│   ├── config.py                # Configuration settings (LLM, paths, chunking)
+│   ├── data_loader.py           # PDFLoader class - loads text from local file
+│   ├── tokenizer.py             # TextTokenizer class - text preprocessing (string ops only, no regex)
+│   ├── extractor.py             # FinancialDetective class - LLM-based entity/relationship extraction
+│   ├── llm_engine.py            # LLMEngine class - LLM API interface with retry logic
+│   ├── visualizer.py            # GraphVisualizer class - NetworkX graph visualization
+│   └── utils.py                 # Utility functions (logging, JSON cleaning)
+│
+├── data/                        # Input data directory
+│   └── messy_text.txt           # Input text file (extracted from PDF, can be manually created)
+│
+├── output/                      # Output directory (auto-created)
+│   ├── graph_output.json        # Knowledge graph JSON output (entities + relationships)
+│   ├── knowledge_graph.png      # Visual graph representation (NetworkX + Matplotlib)
+│   └── financial_detective.log  # Application execution log file
+│
+├── PDF/                         # PDF source files directory
+│   └── RIL-Integrated-Annual-Report-2024-25.pdf  # Sample annual report PDF
+│
+└── tests/                       # Test directory
+    └── test_extraction.py       # Unit tests for extraction functionality
+```
+
+### Key Files Description
+
+- **`main.py`**: Main entry point that orchestrates the entire pipeline:
+  1. Loads messy text from file
+  2. Optionally tokenizes and chunks text
+  3. Extracts entities and relationships using LLM
+  4. Saves JSON output
+  5. Generates visual graph
+
+- **`src/extractor.py`**: Core extraction engine (`FinancialDetective` class):
+  - Handles text chunking for large documents
+  - Manages LLM API calls with retry logic
+  - Performs entity and relationship deduplication
+  - Validates and fixes relationships
+  - Returns structured knowledge graph data
+
+- **`src/visualizer.py`**: Graph visualization engine (`GraphVisualizer` class):
+  - Creates NetworkX directed graph
+  - Connects isolated nodes to main entity
+  - Applies color coding by entity/relationship type
+  - Generates high-resolution PNG output
+  - Displays main node with company name only
+
+- **`src/llm_engine.py`**: LLM API interface:
+  - Manages API communication
+  - Handles timeouts and retries
+  - Enforces JSON-only output
+  - Truncates long contexts
+
+- **`generate_messy_text.py`**: PDF to text converter:
+  - Extracts text from PDF files
+  - Saves to `data/messy_text.txt`
+
+## 🚀 Features
+
+### Core Features
+
+- **100% LLM-Based Extraction**: All entity and relationship extraction done through LLM understanding (no regex)
+- **Text Preprocessing**: Optional tokenization and chunking using string operations only (no regex)
+- **Comprehensive Entities**: Extracts Companies, People, Financial Amounts, Risks, Frameworks, Metrics, Locations, Products
+- **Rich Relationships**: Extracts ownership (OWNS), financial (HAS_PROFIT, HAS_REVENUE), personnel (EMPLOYS, CHAIRMAN), risks (FACES_RISK), frameworks (FOLLOWS), and more
+- **Connected Graph**: Ensures all nodes are connected with automatic edge creation for isolated nodes
+- **Strict JSON Schema**: Valid JSON output following knowledge graph format
+- **Comprehensive Logging**: Dual output to console and log file with timestamps
+- **Robust Error Handling**: Graceful handling of missing nodes, invalid JSON, and API errors
+- **Deduplication**: Advanced deduplication logic to prevent duplicate entities and relationships
+
+### Visualization Features
+
+- **Beautiful NetworkX Visualization**:
+  - Color-coded nodes by entity type (Company=Blue, Person=Light Blue, Dollar Amount=Green, Risk=Red, etc.)
+  - Color-coded edges by relationship type (Ownership=Red, Financial=Green, Personnel=Blue, Risk=Orange)
+  - Dynamic sizing based on graph complexity (figure, nodes, labels)
+  - High-resolution output (300 DPI)
+  - Curved edges for better readability
+  - Automatic connection of isolated nodes to main entity
+
+- **Smart Labeling**:
+  - Main node displays only company name (clean, no relationship clutter)
+  - Other nodes show entity name with relationship context
+  - Truncated labels for long text with ellipsis
+
+- **Layout Algorithms**:
+  - Spring layout for small graphs (≤15 nodes)
+  - Kamada-Kawai layout for medium graphs (≤30 nodes)
+  - Circular/radial layout for large graphs (>30 nodes) with main node centered
+
+## 📦 Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone <repository-url>
+   cd The-Financial-Detective
+   ```
+
+>>>>>>> 8dc6b8309b44c4edd7dd930208fb955cec37120e
 2. **Install dependencies:**
    ```bash
    pip install -r requirements.txt
@@ -205,6 +314,7 @@ The output follows this strict JSON schema:
 - **Flexible Chunking**: Supports sentence, paragraph, or fixed-size chunking
 
 ### Graph Visualization
+<<<<<<< HEAD
 - **Automatic Connection**: Isolated nodes are automatically connected to the main node (typically the primary company)
 - **Color Coding**: 
   - Nodes colored by entity type (Company=Blue, Person=Light Blue, Dollar Amount=Green, Risk=Red, Framework=Purple, etc.)
@@ -215,6 +325,25 @@ The output follows this strict JSON schema:
 - **Node Metadata**: Entity metadata preserved and available in graph structure
 - **Missing Node Handling**: Automatically creates nodes for entities referenced in relationships but not explicitly defined
 
+=======
+- **Automatic Connection**: Isolated nodes are automatically connected to the main node (typically the primary company) with appropriate relationship types
+- **Color Coding**: 
+  - **Nodes**: Company=Blue, Person=Light Blue, Dollar Amount=Green, Risk=Red, Framework=Purple, Product=Orange, Metric=Teal, Location=Orange, Default=Grey
+  - **Edges**: Ownership=Red, Financial=Green, Personnel=Blue, Risk=Orange, Framework=Purple, Default=Grey
+- **Dynamic Sizing**: Figure, node, and label sizes adjust based on graph complexity
+  - Small graphs (≤15 nodes): 30x22 figure, 4000 node size, 16pt font
+  - Medium graphs (≤30 nodes): 45x34 figure, 3500 node size, 15pt font
+  - Large graphs (>30 nodes): 50x45+ figure, 3000-2500 node size, 14-16pt font
+- **High Quality**: 300 DPI output for clear visualization
+- **Smart Labeling**: 
+  - Main node shows only company name (clean display)
+  - Other nodes show entity name with relationship context
+  - Labels truncated intelligently for readability
+- **Node Metadata**: Entity metadata preserved and available in graph structure
+- **Missing Node Handling**: Automatically creates nodes for entities referenced in relationships but not explicitly defined
+
+
+>>>>>>> 8dc6b8309b44c4edd7dd930208fb955cec37120e
 ## 🧪 Testing
 
 Run tests to verify extraction:
@@ -237,10 +366,34 @@ pytest tests/
 - ✅ Minimum requirements validation (20+ entities/relationships)
 
 ### 📊 Current Capabilities
+<<<<<<< HEAD
 - **Entity Types**: Company, Person, Location, Dollar Amount, Risk, Product, Framework, Metric, Subsidiary, Partnership
 - **Relationship Types**: 25+ types including OWNS, HAS_PROFIT, CHAIRMAN, FOUNDER, FACES_RISK, FOLLOWS, etc.
 - **Graph Features**: Color-coded nodes/edges, labeled relationships, automatic isolation handling
 - **Processing**: Supports chunking, parallel processing, and flexible text preprocessing
+=======
+- **Entity Types**: Company, Person, Location, Dollar Amount, Risk, Product, Framework, Metric
+- **Relationship Types**: 25+ types including:
+  - Ownership: OWNS, SUBSIDIARY_OF, ACQUIRED
+  - Financial: HAS_PROFIT, HAS_REVENUE, HAS_ASSET, HAS_DEBT, HAS_EQUITY, HAS_EXPORTS, HAS_CSR_CONTRIBUTION
+  - Personnel: EMPLOYS, CHAIRMAN, FOUNDER, CEO, MANAGING_DIRECTOR, DIRECTOR, REPORTS_TO
+  - Risk: FACES_RISK
+  - Framework: FOLLOWS, USES
+  - Operational: OPERATES, OPERATES_IN, LOCATED_IN
+  - Business: PARTNERS_WITH, COMPETES_WITH, INVESTED_IN, PRODUCES
+  - General: RELATED_TO, RANKED_IN, IMPACTS
+- **Graph Features**: 
+  - Color-coded nodes/edges by type
+  - Smart labeling with relationship context
+  - Main node displays company name only
+  - Automatic isolation handling
+  - Currency symbol normalization and display
+- **Processing**: 
+  - Supports chunking with overlap
+  - Incremental deduplication
+  - Relationship validation and correction
+  - Flexible text preprocessing (sentence/paragraph/fixed chunking)
+>>>>>>> 8dc6b8309b44c4edd7dd930208fb955cec37120e
 
 ### 🔄 Notes
 - The project uses **no regex** for entity/relationship extraction (100% LLM-based)
@@ -252,7 +405,11 @@ pytest tests/
 ## 👤 Author
 
 **Vivek Khillar**
+<<<<<<< HEAD
 
 ## 📄 License
 
 [Add your license here]
+=======
+**05-01-2026**
+>>>>>>> 8dc6b8309b44c4edd7dd930208fb955cec37120e

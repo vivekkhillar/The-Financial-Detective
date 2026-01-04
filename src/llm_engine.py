@@ -13,14 +13,17 @@ class LLMEngine:
         )
 
     def generate_extraction(self, prompt, context_text):
-        """
-        Sends the text to the LLM and retrieves the raw response.
-        """
+        # Safety limit: truncate if text is still too long (shouldn't happen if chunking works)
+        max_context_length = 12000
+        if len(context_text) > max_context_length:
+            logger.warning(f"Context text still too long ({len(context_text)} chars), truncating to {max_context_length}")
+            context_text = context_text[:max_context_length]
+        
         messages = [
             {"role": "system", "content": "You are a JSON-only API. You MUST respond with ONLY valid JSON. No explanations, no markdown, no text before or after. Just pure JSON starting with { and ending with }."},
-            {"role": "user", "content": f"{prompt}\n\nTEXT TO ANALYZE:\n{context_text[:5000]}"}  # Limit context to avoid token limits
+            {"role": "user", "content": f"{prompt}\n\nTEXT TO ANALYZE:\n{context_text}\n\nRemember: Output ONLY valid JSON, nothing else."}
         ]
-
+    
         try:
             logger.info("Sending request to LLM...")
             response = self.client.chat.completions.create(
