@@ -180,7 +180,6 @@ The-Financial-Detective/
    cd The-Financial-Detective
    ```
 
->>>>>>> 8dc6b8309b44c4edd7dd930208fb955cec37120e
 2. **Install dependencies:**
    ```bash
    pip install -r requirements.txt
@@ -343,7 +342,6 @@ The output follows this strict JSON schema:
 - **Missing Node Handling**: Automatically creates nodes for entities referenced in relationships but not explicitly defined
 
 
->>>>>>> 8dc6b8309b44c4edd7dd930208fb955cec37120e
 ## 🧪 Testing
 
 Run tests to verify extraction:
@@ -393,7 +391,6 @@ pytest tests/
   - Incremental deduplication
   - Relationship validation and correction
   - Flexible text preprocessing (sentence/paragraph/fixed chunking)
->>>>>>> 8dc6b8309b44c4edd7dd930208fb955cec37120e
 
 ### 🔄 Notes
 - The project uses **no regex** for entity/relationship extraction (100% LLM-based)
