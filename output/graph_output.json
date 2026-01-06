@@ -43,7 +43,7 @@
     {
       "id": "\u20b92,156 Crore",
       "type": "Dollar Amount",
-      "metadata": "CSR Contribution"
+      "metadata": "Contribution to society"
     },
     {
       "id": "Market volatility risk",
@@ -56,39 +56,29 @@
       "metadata": "Risk factor"
     },
     {
-      "id": "\u20b93,30,943 Crore",
+      "id": "\u20b94,30,453 Crore",
       "type": "Dollar Amount",
-      "metadata": "Revenue"
+      "metadata": "Total value added"
     },
     {
-      "id": "US$ 38.7 Billion",
+      "id": "\u20b93,94,020 Crore",
       "type": "Dollar Amount",
-      "metadata": "Revenue"
+      "metadata": "Total value added in FY 2023-24"
     },
     {
-      "id": "\u20b925,094 Crore",
+      "id": "\u20b91,592 Crore",
       "type": "Dollar Amount",
-      "metadata": "EBITDA"
+      "metadata": "Contribution to society in FY 2023-24"
     },
     {
-      "id": "\u20b920,696 Crore",
+      "id": "\u20b92,10,269 Crore",
       "type": "Dollar Amount",
-      "metadata": "Revenue"
+      "metadata": "Contribution to national exchequer"
     },
     {
-      "id": "\u20b91,54,119 Crore",
+      "id": "\u20b91,86,440 Crore",
       "type": "Dollar Amount",
-      "metadata": "Revenue"
-    },
-    {
-      "id": "\u20b96,26,921 Crore",
-      "type": "Dollar Amount",
-      "metadata": "Revenue"
-    },
-    {
-      "id": "\u20b954,988 Crore",
-      "type": "Dollar Amount",
-      "metadata": "EBITDA"
+      "metadata": "Contribution to national exchequer in FY 2023-24"
     },
     {
       "id": "Shri Dhirubhai Ambani",
@@ -116,9 +106,14 @@
       "metadata": "Partner in Media business"
     },
     {
-      "id": "China",
-      "type": "Company",
-      "metadata": "Source of incremental supply additions"
+      "id": "KG-D6",
+      "type": "Location",
+      "metadata": "Block for Oil & Gas production"
+    },
+    {
+      "id": "CBM",
+      "type": "Location",
+      "metadata": "Block for Oil & Gas production"
     },
     {
       "id": "6.5%",
@@ -161,39 +156,19 @@
       "metadata": "Decline rate"
     },
     {
-      "id": "7.1%",
-      "type": "Metric",
-      "metadata": "Growth rate"
-    },
-    {
       "id": "US$ 125.3 billion",
       "type": "Dollar Amount",
-      "metadata": "Consolidated revenue"
-    },
-    {
-      "id": "\u20b910,00,122 crore",
-      "type": "Dollar Amount",
-      "metadata": "Consolidated revenue previous year"
-    },
-    {
-      "id": "2.9%",
-      "type": "Metric",
-      "metadata": "EBITDA growth rate"
+      "metadata": "Consolidated revenue in USD"
     },
     {
       "id": "US$ 21.5 billion",
       "type": "Dollar Amount",
-      "metadata": "Consolidated EBITDA"
-    },
-    {
-      "id": "\u20b91,78,290 crore",
-      "type": "Dollar Amount",
-      "metadata": "Consolidated EBITDA previous year"
+      "metadata": "Consolidated EBITDA in USD"
     },
     {
       "id": "US$ 9.5 billion",
       "type": "Dollar Amount",
-      "metadata": "Consolidated PAT"
+      "metadata": "Consolidated PAT in USD"
     },
     {
       "id": "Retail",
@@ -218,7 +193,7 @@
     {
       "id": "US$ 40.7 billion",
       "type": "Dollar Amount",
-      "metadata": "Gross debt"
+      "metadata": "Gross debt in USD"
     },
     {
       "id": "\u20b91,17,083 crore",
@@ -228,7 +203,7 @@
     {
       "id": "US$ 13.7 billion",
       "type": "Dollar Amount",
-      "metadata": "Net debt"
+      "metadata": "Net debt in USD"
     },
     {
       "id": "\u20b91,31,107 crore",
@@ -238,17 +213,7 @@
     {
       "id": "US$ 15.3 billion",
       "type": "Dollar Amount",
-      "metadata": "Capex"
-    },
-    {
-      "id": "\u20b91,31,769 crore",
-      "type": "Dollar Amount",
-      "metadata": "Capex previous year"
-    },
-    {
-      "id": "Standalone RIL",
-      "type": "Company",
-      "metadata": "Standalone entity"
+      "metadata": "Capex in USD"
     },
     {
       "id": "\u20b95,57,163 crore",
@@ -256,14 +221,9 @@
       "metadata": "Standalone revenue"
     },
     {
-      "id": "US$ 65.2 billion",
+      "id": "\u20b974,163 crore",
       "type": "Dollar Amount",
-      "metadata": "Standalone revenue"
-    },
-    {
-      "id": "\u20b986,393 crore",
-      "type": "Dollar Amount",
-      "metadata": "Standalone EBITDA previous year"
+      "metadata": "Standalone EBITDA"
     }
   ],
   "relationships": [
@@ -298,9 +258,14 @@
       "relation": "EMPLOYS"
     },
     {
-      "source": "Reliance Industries Limited",
-      "target": "Disney",
+      "source": "Disney",
+      "target": "Reliance Industries Limited",
       "relation": "OWNS"
+    },
+    {
+      "source": "Mukesh D. Ambani",
+      "target": "Reliance Industries Limited",
+      "relation": "MANAGING_DIRECTOR"
     }
   ]
 }

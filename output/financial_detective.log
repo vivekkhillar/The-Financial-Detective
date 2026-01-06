@@ -14087,3 +14087,114 @@ Here's a breakdown of the key takeaways from the provided text, organized for cl
 2026-01-04 23:47:04,956 - INFO - Mission Complete. Documentation and Demo required next.
 2026-01-04 23:59:39,367 - INFO - Logger initialized. Log file: output\financial_detective.log
 2026-01-04 23:59:42,934 - INFO - Text length (13 chars) is manageable, processing directly
+2026-01-05 23:27:13,877 - INFO - Logger initialized. Log file: output\financial_detective.log
+2026-01-05 23:27:13,903 - INFO - Reading PDF from PDF\RIL-Integrated-Annual-Report-2024-25.pdf...
+2026-01-05 23:27:18,967 - INFO - Extracting text from first 5 pages...
+2026-01-05 23:27:22,851 - INFO - Fixing currency symbol corruption (both $ and ₹ corrupted to 'L')...
+2026-01-05 23:27:22,890 - INFO - Currency symbol fixes applied (rupee priority, then dollar)
+2026-01-05 23:27:23,005 - INFO - Created messy text file: data\messy_text.txt
+2026-01-05 23:27:23,009 - INFO - Total characters: 22329
+2026-01-05 23:29:21,783 - INFO - Logger initialized. Log file: output\financial_detective.log
+2026-01-05 23:30:05,243 - INFO - Starting The Financial Detective...
+2026-01-05 23:30:05,245 - INFO - File path: data\messy_text.txt
+2026-01-05 23:30:05,248 - INFO - Reading messy text file from data\messy_text.txt...
+2026-01-05 23:30:05,257 - INFO - Loaded 22329 characters from text file.
+2026-01-05 23:30:05,260 - INFO - Raw text loaded: 22329 characters
+2026-01-05 23:30:05,265 - INFO - Tokenizing and cleaning text using string operations only...
+2026-01-05 23:30:05,267 - INFO - Starting tokenization process...
+2026-01-05 23:30:05,276 - INFO - Cleaning text using string operations only (minimal cleaning)...
+2026-01-05 23:30:05,280 - INFO - Text cleaned (minimal). Original length: 22312 characters
+2026-01-05 23:30:05,283 - INFO - Chunking text using 'sentence' strategy...
+2026-01-05 23:30:05,296 - INFO - Split text into 62 sentences
+2026-01-05 23:30:05,298 - INFO - Tokenization complete: 7 chunks created
+2026-01-05 23:30:05,299 - INFO - Text processed: 22329 -> 22312 characters
+2026-01-05 23:30:05,304 - INFO - Text chunked into 7 chunks
+2026-01-05 23:30:10,264 - INFO - Text length (22312 chars) exceeds limit (10000), chunking...
+2026-01-05 23:30:10,265 - INFO - Split text into 7 chunks
+2026-01-05 23:30:10,265 - INFO - Processing chunk 1/7 (4000 chars)...
+2026-01-05 23:30:10,266 - INFO - Sending request to LLM...
+2026-01-05 23:30:42,429 - INFO - Chunk 1 success: +14 entities, +6 relationships
+2026-01-05 23:30:42,431 - INFO - After dedup: 13 unique entities, 6 unique relationships
+2026-01-05 23:30:42,431 - INFO - Processing chunk 2/7 (4000 chars)...
+2026-01-05 23:30:42,432 - INFO - Sending request to LLM...
+2026-01-05 23:30:53,009 - INFO - Chunk 2 success: +9 entities, +0 relationships
+2026-01-05 23:30:53,010 - INFO - After dedup: 20 unique entities, 6 unique relationships
+2026-01-05 23:30:53,011 - INFO - Processing chunk 3/7 (4000 chars)...
+2026-01-05 23:30:53,012 - INFO - Sending request to LLM...
+2026-01-05 23:31:03,203 - INFO - Chunk 3 success: +7 entities, +3 relationships
+2026-01-05 23:31:03,204 - INFO - After dedup: 24 unique entities, 9 unique relationships
+2026-01-05 23:31:03,204 - INFO - Processing chunk 4/7 (4000 chars)...
+2026-01-05 23:31:03,205 - INFO - Sending request to LLM...
+2026-01-05 23:31:12,152 - INFO - Chunk 4 success: +4 entities, +4 relationships
+2026-01-05 23:31:12,153 - INFO - After dedup: 26 unique entities, 13 unique relationships
+2026-01-05 23:31:12,153 - INFO - Processing chunk 5/7 (4000 chars)...
+2026-01-05 23:31:12,154 - INFO - Sending request to LLM...
+2026-01-05 23:31:35,522 - INFO - Chunk 5 success: +30 entities, +0 relationships
+2026-01-05 23:31:35,523 - INFO - After dedup: 48 unique entities, 13 unique relationships
+2026-01-05 23:31:35,523 - INFO - Processing chunk 6/7 (3812 chars)...
+2026-01-05 23:31:35,524 - INFO - Sending request to LLM...
+2026-01-05 23:31:43,616 - WARNING - JSON missing required keys, using empty structure
+2026-01-05 23:31:43,661 - INFO - Chunk 6 success: +0 entities, +0 relationships
+2026-01-05 23:31:43,662 - INFO - After dedup: 48 unique entities, 13 unique relationships
+2026-01-05 23:31:43,663 - INFO - Processing chunk 7/7 (112 chars)...
+2026-01-05 23:31:43,665 - INFO - Sending request to LLM...
+2026-01-05 23:31:47,458 - INFO - Chunk 7 success: +2 entities, +0 relationships
+2026-01-05 23:31:47,459 - INFO - After dedup: 49 unique entities, 13 unique relationships
+2026-01-05 23:31:47,460 - INFO - Final deduplication pass: 49 entities, 13 relationships
+2026-01-05 23:31:47,461 - INFO - Filtered out 4 invalid entities (dates, events, documents, percentages)
+2026-01-05 23:31:47,498 - WARNING - Removing invalid OWNS relationship: Reliance Industries Limited -> OWNS -> Digital Services (Product) (can only own Companies)
+2026-01-05 23:31:47,499 - WARNING - Removing invalid OWNS relationship: Reliance Industries Limited -> OWNS -> Oil to Chemicals (O2C) (Product) (can only own Companies)
+2026-01-05 23:31:47,500 - WARNING - Removing invalid OWNS relationship: Reliance Industries Limited -> OWNS -> Oil and Gas (Product) (can only own Companies)
+2026-01-05 23:31:47,500 - WARNING - Removing invalid financial relationship: Reliance Industries Limited (Company) -> HAS_EXPORTS -> KG-D6 (Location) (target must be Dollar Amount or Metric, not Location)
+2026-01-05 23:31:47,501 - WARNING - Removing invalid financial relationship: Reliance Industries Limited (Company) -> HAS_EXPORTS -> CBM (Location) (target must be Dollar Amount or Metric, not Location)
+2026-01-05 23:31:47,532 - INFO - Removed 5 invalid relationships
+2026-01-05 23:31:47,539 - INFO - Final result: 45 unique entities, 8 unique relationships
+2026-01-05 23:31:47,549 - INFO - Graph data: {'entities': [{'id': 'Reliance Industries Limited', 'type': 'Company', 'metadata': 'Parent company'}, {'id': 'Jio', 'type': 'Company', 'metadata': 'Subsidiary'}, {'id': 'Digital Services', 'type': 'Product', 'metadata': 'Business segment'}, {'id': 'Media and Entertainment', 'type': 'Company', 'metadata': 'Business unit'}, {'id': 'Oil and Gas', 'type': 'Product', 'metadata': 'Business segment'}, {'id': 'Mukesh D. Ambani', 'type': 'Person', 'metadata': 'Chairman and Managing Director'}, {'id': '₹10,00,000 Crore', 'type': 'Dollar Amount', 'metadata': 'Consolidated Total Equity'}, {'id': '₹2,83,719 Crore', 'type': 'Dollar Amount', 'metadata': 'Exports'}, {'id': '₹2,156 Crore', 'type': 'Dollar Amount', 'metadata': 'Contribution to society'}, {'id': 'Market volatility risk', 'type': 'Risk', 'metadata': 'Risk factor'}, {'id': 'Regulatory compliance risk', 'type': 'Risk', 'metadata': 'Risk factor'}, {'id': '₹4,30,453 Crore', 'type': 'Dollar Amount', 'metadata': 'Total value added'}, {'id': '₹3,94,020 Crore', 'type': 'Dollar Amount', 'metadata': 'Total value added in FY 2023-24'}, {'id': '₹1,592 Crore', 'type': 'Dollar Amount', 'metadata': 'Contribution to society in FY 2023-24'}, {'id': '₹2,10,269 Crore', 'type': 'Dollar Amount', 'metadata': 'Contribution to national exchequer'}, {'id': '₹1,86,440 Crore', 'type': 'Dollar Amount', 'metadata': 'Contribution to national exchequer in FY 2023-24'}, {'id': 'Shri Dhirubhai Ambani', 'type': 'Person', 'metadata': 'Founder'}, {'id': '₹10,71,174 crore', 'type': 'Dollar Amount', 'metadata': 'Consolidated revenue'}, {'id': '₹1,83,422 crore', 'type': 'Dollar Amount', 'metadata': 'Consolidated EBITDA'}, {'id': '₹81,309 crore', 'type': 'Dollar Amount', 'metadata': 'Consolidated PAT'}, {'id': 'Disney', 'type': 'Company', 'metadata': 'Partner in Media business'}, {'id': 'KG-D6', 'type': 'Location', 'metadata': 'Block for Oil & Gas production'}, {'id': 'CBM', 'type': 'Location', 'metadata': 'Block for Oil & Gas production'}, {'id': '6.5%', 'type': 'Metric', 'metadata': 'Growth rate'}, {'id': '9.2%', 'type': 'Metric', 'metadata': 'Growth rate'}, {'id': '16%', 'type': 'Metric', 'metadata': 'Growth rate'}, {'id': '27%', 'type': 'Metric', 'metadata': 'Growth rate'}, {'id': '14%', 'type': 'Metric', 'metadata': 'Growth rate'}, {'id': '8.6%', 'type': 'Metric', 'metadata': 'Growth rate'}, {'id': '4.9%', 'type': 'Metric', 'metadata': 'Growth rate'}, {'id': '11.9%', 'type': 'Metric', 'metadata': 'Decline rate'}, {'id': 'US$ 125.3 billion', 'type': 'Dollar Amount', 'metadata': 'Consolidated revenue in USD'}, {'id': 'US$ 21.5 billion', 'type': 'Dollar Amount', 'metadata': 'Consolidated EBITDA in USD'}, {'id': 'US$ 9.5 billion', 'type': 'Dollar Amount', 'metadata': 'Consolidated PAT in USD'}, {'id': 'Retail', 'type': 'Product', 'metadata': 'Business segment'}, {'id': 'Oil to Chemicals (O2C)', 'type': 'Product', 'metadata': 'Business segment'}, {'id': '₹1,46,917 crore', 'type': 'Dollar Amount', 'metadata': 'Consolidated cash profit'}, {'id': '₹3,47,530 crore', 'type': 'Dollar Amount', 'metadata': 'Gross debt'}, {'id': 'US$ 40.7 billion', 'type': 'Dollar Amount', 'metadata': 'Gross debt in USD'}, {'id': '₹1,17,083 crore', 'type': 'Dollar Amount', 'metadata': 'Net debt'}, {'id': 'US$ 13.7 billion', 'type': 'Dollar Amount', 'metadata': 'Net debt in USD'}, {'id': '₹1,31,107 crore', 'type': 'Dollar Amount', 'metadata': 'Capex'}, {'id': 'US$ 15.3 billion', 'type': 'Dollar Amount', 'metadata': 'Capex in USD'}, {'id': '₹5,57,163 crore', 'type': 'Dollar Amount', 'metadata': 'Standalone revenue'}, {'id': '₹74,163 crore', 'type': 'Dollar Amount', 'metadata': 'Standalone EBITDA'}], 'relationships': [{'source': 'Reliance Industries Limited', 'target': 'Jio', 'relation': 'OWNS'}, {'source': 'Reliance Industries Limited', 'target': 'Reliance Industries Limited', 'relation': 'OWNS'}, {'source': 'Reliance Industries Limited', 'target': 'Media and Entertainment', 'relation': 'OWNS'}, {'source': 'Shri Dhirubhai Ambani', 'target': 'Reliance Industries Limited', 'relation': 'FOUNDER'}, {'source': 'Mukesh D. Ambani', 'target': 'Reliance Industries Limited', 'relation': 'CHAIRMAN'}, {'source': 'Reliance Industries Limited', 'target': 'Disney', 'relation': 'EMPLOYS'}, {'source': 'Disney', 'target': 'Reliance Industries Limited', 'relation': 'OWNS'}, {'source': 'Mukesh D. Ambani', 'target': 'Reliance Industries Limited', 'relation': 'MANAGING_DIRECTOR'}]}
+2026-01-05 23:31:47,574 - INFO - Extraction complete:
+2026-01-05 23:31:47,585 - INFO -   - Entities extracted: 45
+2026-01-05 23:31:47,592 - INFO -   - Relationships extracted: 8
+2026-01-05 23:31:47,683 - INFO - JSON data saved to output\graph_output.json
+2026-01-05 23:31:47,725 - INFO - Added 45 nodes to the graph
+2026-01-05 23:31:47,732 - INFO - Added 7 edges to the graph
+2026-01-05 23:31:47,736 - INFO - Found 39 isolated nodes: {'4.9%', 'US$ 9.5 billion', 'US$ 125.3 billion', '₹1,46,917 crore', '₹2,156 Crore', 'Oil to Chemicals (O2C)', '11.9%', 'KG-D6', '₹5,57,163 crore', '6.5%', '₹3,94,020 Crore', '₹81,309 crore', '₹10,00,000 Crore', 'Digital Services', '16%', 'Oil and Gas', '9.2%', '27%', '₹2,83,719 Crore', '₹1,31,107 crore', '₹1,83,422 crore', '₹1,592 Crore', '8.6%', '₹2,10,269 Crore', '₹1,86,440 Crore', '₹10,71,174 crore', 'US$ 15.3 billion', 'Market volatility risk', 'US$ 13.7 billion', 'US$ 40.7 billion', '₹74,163 crore', '₹3,47,530 crore', '14%', '₹1,17,083 crore', 'CBM', 'Regulatory compliance risk', 'US$ 21.5 billion', 'Retail', '₹4,30,453 Crore'}
+2026-01-05 23:31:47,748 - INFO - Connected 4.9% (Metric) to Reliance Industries Limited with RELATED_TO
+2026-01-05 23:31:47,754 - INFO - Connected US$ 9.5 billion (Dollar Amount) to Reliance Industries Limited with HAS_REVENUE
+2026-01-05 23:31:47,763 - INFO - Connected US$ 125.3 billion (Dollar Amount) to Reliance Industries Limited with HAS_REVENUE
+2026-01-05 23:31:47,774 - INFO - Connected ₹1,46,917 crore (Dollar Amount) to Reliance Industries Limited with HAS_PROFIT
+2026-01-05 23:31:47,784 - INFO - Connected ₹2,156 Crore (Dollar Amount) to Reliance Industries Limited with HAS_CSR_CONTRIBUTION
+2026-01-05 23:31:47,798 - INFO - Connected Oil to Chemicals (O2C) (Product) to Reliance Industries Limited with PRODUCES
+2026-01-05 23:31:47,809 - INFO - Connected 11.9% (Metric) to Reliance Industries Limited with RELATED_TO
+2026-01-05 23:31:47,819 - INFO - Connected KG-D6 (Location) to Reliance Industries Limited with LOCATED_IN
+2026-01-05 23:31:47,820 - INFO - Connected ₹5,57,163 crore (Dollar Amount) to Reliance Industries Limited with HAS_REVENUE
+2026-01-05 23:31:47,824 - INFO - Connected 6.5% (Metric) to Reliance Industries Limited with RELATED_TO
+2026-01-05 23:31:47,827 - INFO - Connected ₹3,94,020 Crore (Dollar Amount) to Reliance Industries Limited with HAS_REVENUE
+2026-01-05 23:31:47,829 - INFO - Connected ₹81,309 crore (Dollar Amount) to Reliance Industries Limited with HAS_REVENUE
+2026-01-05 23:31:47,830 - INFO - Connected ₹10,00,000 Crore (Dollar Amount) to Reliance Industries Limited with HAS_EQUITY
+2026-01-05 23:31:47,831 - INFO - Connected Digital Services (Product) to Reliance Industries Limited with PRODUCES
+2026-01-05 23:31:47,833 - INFO - Connected 16% (Metric) to Reliance Industries Limited with RELATED_TO
+2026-01-05 23:31:47,833 - INFO - Connected Oil and Gas (Product) to Reliance Industries Limited with PRODUCES
+2026-01-05 23:31:47,834 - INFO - Connected 9.2% (Metric) to Reliance Industries Limited with RELATED_TO
+2026-01-05 23:31:47,835 - INFO - Connected 27% (Metric) to Reliance Industries Limited with RELATED_TO
+2026-01-05 23:31:47,835 - INFO - Connected ₹2,83,719 Crore (Dollar Amount) to Reliance Industries Limited with HAS_EXPORTS
+2026-01-05 23:31:47,836 - INFO - Connected ₹1,31,107 crore (Dollar Amount) to Reliance Industries Limited with HAS_REVENUE
+2026-01-05 23:31:47,836 - INFO - Connected ₹1,83,422 crore (Dollar Amount) to Reliance Industries Limited with HAS_REVENUE
+2026-01-05 23:31:47,837 - INFO - Connected ₹1,592 Crore (Dollar Amount) to Reliance Industries Limited with HAS_CSR_CONTRIBUTION
+2026-01-05 23:31:47,838 - INFO - Connected 8.6% (Metric) to Reliance Industries Limited with RELATED_TO
+2026-01-05 23:31:47,838 - INFO - Connected ₹2,10,269 Crore (Dollar Amount) to Reliance Industries Limited with HAS_CSR_CONTRIBUTION
+2026-01-05 23:31:47,840 - INFO - Connected ₹1,86,440 Crore (Dollar Amount) to Reliance Industries Limited with HAS_CSR_CONTRIBUTION
+2026-01-05 23:31:47,842 - INFO - Connected ₹10,71,174 crore (Dollar Amount) to Reliance Industries Limited with HAS_REVENUE
+2026-01-05 23:31:47,844 - INFO - Connected US$ 15.3 billion (Dollar Amount) to Reliance Industries Limited with HAS_REVENUE
+2026-01-05 23:31:47,845 - INFO - Connected Market volatility risk (Risk) to Reliance Industries Limited with FACES_RISK
+2026-01-05 23:31:47,846 - INFO - Connected US$ 13.7 billion (Dollar Amount) to Reliance Industries Limited with HAS_DEBT
+2026-01-05 23:31:47,847 - INFO - Connected US$ 40.7 billion (Dollar Amount) to Reliance Industries Limited with HAS_DEBT
+2026-01-05 23:31:47,848 - INFO - Connected ₹74,163 crore (Dollar Amount) to Reliance Industries Limited with HAS_REVENUE
+2026-01-05 23:31:47,849 - INFO - Connected ₹3,47,530 crore (Dollar Amount) to Reliance Industries Limited with HAS_DEBT
+2026-01-05 23:31:47,850 - INFO - Connected 14% (Metric) to Reliance Industries Limited with RELATED_TO
+2026-01-05 23:31:47,851 - INFO - Connected ₹1,17,083 crore (Dollar Amount) to Reliance Industries Limited with HAS_DEBT
+2026-01-05 23:31:47,852 - INFO - Connected CBM (Location) to Reliance Industries Limited with LOCATED_IN
+2026-01-05 23:31:47,852 - INFO - Connected Regulatory compliance risk (Risk) to Reliance Industries Limited with FACES_RISK
+2026-01-05 23:31:47,852 - INFO - Connected US$ 21.5 billion (Dollar Amount) to Reliance Industries Limited with HAS_REVENUE
+2026-01-05 23:31:47,853 - INFO - Connected Retail (Product) to Reliance Industries Limited with PRODUCES
+2026-01-05 23:31:47,853 - INFO - Connected ₹4,30,453 Crore (Dollar Amount) to Reliance Industries Limited with HAS_REVENUE
+2026-01-05 23:32:19,411 - INFO - Graph visualization saved to output\knowledge_graph.png
+2026-01-05 23:32:19,422 - INFO - Mission Complete. Documentation and Demo required next.

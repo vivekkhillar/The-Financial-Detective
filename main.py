@@ -1,3 +1,4 @@
+# Main File to run the entire script
 import json
 # Path setup happens automatically when src is imported (see src/__init__.py)
 from src.config import Config
